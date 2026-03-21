@@ -1,11 +1,53 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
+@source '../**/*.tsx';
+@source '../**/*.ts';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Fonty */
+    --font-sans: "Oxanium", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    /* Tła */
+    --color-base: #050508;
+    --color-surface: #0a0a12;
+    --color-elevated: #0f0f1a;
+    --color-card: #161625;
+    --color-hover: #1e1e30;
+    --color-border: #1e293b;
+
+    /* Akcent – cyjan */
+    --color-accent: #22d3ee;
+    --color-accent-light: #67e8f9;
+    --color-accent-hover: #06b6d4;
+    --color-accent-deep: #0891b2;
+    --color-accent-muted: #0e7490;
+
+    /* Tekst */
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #475569;
+    --color-text-accent: #22d3ee;
+
+    /* Status */
+    --color-success: #4ade80;
+    --color-error: #f87171;
+    --color-warning: #fbbf24;
+    --color-info: #818cf8;
+}
+
+@layer base {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        background-color: var(--color-base);
+        color: var(--color-text-primary);
+        font-family: var(--font-mono);
+    }
 }
