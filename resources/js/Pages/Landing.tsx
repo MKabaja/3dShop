@@ -1,5 +1,7 @@
 import React from "react";
-export default function Landing() {
+import AppLayout from "@/Components/layouts/AppLayout";
+
+function Landing() {
     return (
         <div className="min-h-screen bg-base flex items-center justify-center">
             <div className="text-center">
@@ -12,10 +14,15 @@ export default function Landing() {
                         Zobacz produkty
                     </button>
                     <button className="border border-accent text-accent px-6 py-3 font-sans hover:bg-accent hover:text-base transition-colors">
-                        Zamów projekt
+                        Zamów baton
                     </button>
                 </div>
             </div>
         </div>
     );
 }
+Landing.layout = (page: React.ReactNode) => (
+    <AppLayout title="Landing">{page}</AppLayout>
+);
+
+export default Landing;

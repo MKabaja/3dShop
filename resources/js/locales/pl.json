@@ -1,0 +1,84 @@
+{
+    "navbar": {
+        "home": "Strona główna",
+        "shop": "Sklep",
+        "about": "O nas",
+        "faq": "FAQ / Poradnik / Blog",
+        "contact": "Kontakt"
+    },
+    "guestMenu": {
+        "login": "Zaloguj",
+        "register": "Zarejestruj",
+        "label": "Zaloguj / Zarejestruj"
+    },
+    "userMenu": {
+        "dashboard": "Panel klienta",
+        "orders": "Moje zamówienia",
+        "cart": "Koszyk",
+        "favorites": "Ulubione",
+        "logout": "Wyloguj"
+    },
+    "adminMenu": {
+        "adminDashboard": "Panel admina",
+        "manageStore": "Zarządzaj sklepem",
+        "logout": "Wyloguj"
+    },
+    "auth": {
+        "email": "Email",
+        "password": "Hasło",
+        "name": "Imię",
+        "remember": "Zapamiętaj mnie",
+        "forgotPassword": "Nie pamiętasz hasła?",
+        "submitLogin": "Zaloguj się",
+        "submitRegister": "Zarejestruj się",
+        "alreadyAccount": "Masz już konto?",
+        "noAccount": "Nie masz konta?"
+    },
+    "shop": {
+        "searchPlaceholder": "Szukaj produktów...",
+        "addToCart": "Dodaj do koszyka",
+        "outOfStock": "Brak w magazynie",
+        "inStock": "Dostępny",
+        "details": "Zobacz szczegóły",
+        "categories": "Kategorie"
+    },
+    "cart": {
+        "title": "Twój koszyk",
+        "empty": "Twój koszyk jest pusty.",
+        "total": "Razem",
+        "checkout": "Do kasy",
+        "update": "Aktualizuj koszyk",
+        "remove": "Usuń",
+        "quantity": "Ilość"
+    },
+    "order": {
+        "title": "Twoje zamówienia",
+        "noOrders": "Brak zamówień.",
+        "orderNumber": "Zamówienie #",
+        "status": "Status",
+        "placedOn": "Złożono",
+        "total": "Kwota",
+        "pending": "W oczekiwaniu",
+        "processing": "W realizacji",
+        "shipped": "Wysłane",
+        "delivered": "Dostarczone",
+        "cancelled": "Anulowane"
+    },
+    "checkout": {
+        "shippingAddress": "Adres dostawy",
+        "paymentMethod": "Metoda płatności",
+        "placeOrder": "Złóż zamówienie",
+        "orderSummary": "Podsumowanie zamówienia",
+        "success": "Zamówienie zostało złożone pomyślnie!"
+    },
+    "form": {
+        "required": "To pole jest wymagane.",
+        "emailInvalid": "Podaj poprawny adres email.",
+        "passwordMin": "Hasło musi mieć co najmniej {{count}} znaków."
+    },
+    "toast": {
+        "addedToCart": "Produkt dodany do koszyka.",
+        "removedFromCart": "Pozycja usunięta z koszyka.",
+        "languageChanged": "Język zmieniono na {{lang}}."
+    }
+}

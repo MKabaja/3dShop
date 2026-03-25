@@ -1,0 +1,84 @@
+{
+    "navbar": {
+        "home": "Home",
+        "shop": "Shop",
+        "about": "About",
+        "faq": "FAQ / Guide / Blog",
+        "contact": "Contact"
+    },
+    "guestMenu": {
+        "login": "Login",
+        "register": "Register",
+        "label": "Login / Register"
+    },
+    "userMenu": {
+        "dashboard": "Customer Dashboard",
+        "orders": "My Orders",
+        "cart": "Cart",
+        "favorites": "Favorites",
+        "logout": "Logout"
+    },
+    "adminMenu": {
+        "adminDashboard": "Admin Dashboard",
+        "manageStore": "Manage Store",
+        "logout": "Logout"
+    },
+    "auth": {
+        "email": "Email",
+        "password": "Password",
+        "name": "Name",
+        "remember": "Remember me",
+        "forgotPassword": "Forgot your password?",
+        "submitLogin": "Sign in",
+        "submitRegister": "Sign up",
+        "alreadyAccount": "Already have an account?",
+        "noAccount": "Don't have an account?"
+    },
+    "shop": {
+        "searchPlaceholder": "Search for products...",
+        "addToCart": "Add to cart",
+        "outOfStock": "Out of stock",
+        "inStock": "In stock",
+        "details": "View details",
+        "categories": "Categories"
+    },
+    "cart": {
+        "title": "Your cart",
+        "empty": "Your cart is empty.",
+        "total": "Total",
+        "checkout": "Checkout",
+        "update": "Update cart",
+        "remove": "Remove",
+        "quantity": "Quantity"
+    },
+    "order": {
+        "title": "Your orders",
+        "noOrders": "No orders yet.",
+        "orderNumber": "Order #",
+        "status": "Status",
+        "placedOn": "Placed on",
+        "total": "Total",
+        "pending": "Pending",
+        "processing": "Processing",
+        "shipped": "Shipped",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled"
+    },
+    "checkout": {
+        "shippingAddress": "Shipping address",
+        "paymentMethod": "Payment method",
+        "placeOrder": "Place order",
+        "orderSummary": "Order summary",
+        "success": "Your order was placed successfully!"
+    },
+    "form": {
+        "required": "This field is required.",
+        "emailInvalid": "Please enter a valid email.",
+        "passwordMin": "Password must be at least {{count}} characters."
+    },
+    "toast": {
+        "addedToCart": "Product added to cart.",
+        "removedFromCart": "Item removed from cart.",
+        "languageChanged": "Language changed to {{lang}}."
+    }
+}
