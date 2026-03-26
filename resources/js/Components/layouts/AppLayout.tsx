@@ -21,7 +21,7 @@ export default function AppLayout({ children, title, description }: Props) {
                 )}
                 <link rel="canonical" href={canonicalUrl} />
                 {/* Open Graph */}
-                
+
                 {/* tytuł w podglądzie linku */}
                 <meta property="og:title" content={`${title}`} />
                 <meta property="og:url" content={canonicalUrl} />

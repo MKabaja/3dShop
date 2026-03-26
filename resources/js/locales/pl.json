@@ -1,4 +1,32 @@
 {
+    "meta": {
+        "home": {
+            "title": "PrintForge – Figurki i modele z druku 3D",
+            "description": "PrintForge oferuje figurki i modele drukowane w 3D z materiałów PLA i PETG – precyzyjne wykończenie, szybka wysyłka i pomocna obsługa klienta."
+        },
+        "shop": {
+            "title": "Sklep – PrintForge",
+            "description": "Przeglądaj katalog PrintForge z modelami drukowanymi w 3D – kategorie, filtry, przejrzyste ceny i szczegółowe zdjęcia ułatwiają wybór idealnego produktu."
+        },
+        "product": {
+            "title": "{{name}} – PrintForge",
+            "description": "{{name}} – model 3D z PrintForge, dostępny w PLA i PETG; precyzyjne wykończenie i szybka wysyłka."
+        },
+        "login": {
+            "title": "Logowanie – PrintForge"
+        },
+        "register": {
+            "title": "Rejestracja – PrintForge"
+        },
+        "about": {
+            "title": "O nas – PrintForge",
+            "description": "Dowiedz się o PrintForge – naszej misji, materiałach i produkcji. Stawiamy na jakość wydruków 3D, materiały przyjazne środowisku i profesjonalną obsługę."
+        },
+        "contact": {
+            "title": "Kontakt – PrintForge",
+            "description": "Skontaktuj się z PrintForge w sprawie produktów, zleceń niestandardowych lub wsparcia. Odpowiadamy szybko i pomagamy z zamówieniami, wysyłką i zwrotami."
+        }
+    },
     "navbar": {
         "home": "Strona główna",
         "shop": "Sklep",

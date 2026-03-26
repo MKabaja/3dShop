@@ -1,4 +1,32 @@
 {
+    "meta": {
+        "home": {
+            "title": "PrintForge – 3D-printed figurines and models",
+            "description": "PrintForge offers high-quality 3D-printed figurines and models made from PLA and PETG – precise finishes, fast shipping and responsive customer support."
+        },
+        "shop": {
+            "title": "Shop – PrintForge",
+            "description": "Browse PrintForge's catalog of 3D-printed models and figurines – categories, filters, transparent pricing, and detailed photos to help you choose the perfect item."
+        },
+        "product": {
+            "title": "{{name}} – PrintForge",
+            "description": "{{name}} – a 3D-printed model from PrintForge, available in PLA and PETG with precise detailing and fast delivery."
+        },
+        "login": {
+            "title": "Login – PrintForge"
+        },
+        "register": {
+            "title": "Register – PrintForge"
+        },
+        "about": {
+            "title": "About – PrintForge",
+            "description": "Learn about PrintForge – our mission, materials and production process. We focus on quality 3D prints, sustainable materials and excellent customer care."
+        },
+        "contact": {
+            "title": "Contact – PrintForge",
+            "description": "Contact PrintForge for inquiries about products, custom prints or support. Our team responds promptly to assist with orders, shipping and returns."
+        }
+    },
     "navbar": {
         "home": "Home",
         "shop": "Shop",

@@ -19,4 +19,9 @@ export interface NavigationLink {
      * Optional list of roles allowed to see this link.
      */
     roles?: UserRole[];
+    /**
+     * Unique identifier for the navigation link.
+     */
+
+    id: string;
 }
