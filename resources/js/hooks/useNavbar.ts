@@ -6,7 +6,14 @@ export function useNavbar() {
     const toggle = () => setIsOpen((v) => !v);
     const close = useCallback(() => setIsOpen(false), []);
 
-    useEffect(() => router.on("start", close), [close]);
+    useEffect(() => {
+        const handleRouteChange = () => close();
+        const remove = router.on("start", handleRouteChange);
+
+        return () => {
+            remove();
+        };
+    }, [close]);
 
     useEffect(() => {
         const handler = (e: KeyboardEvent) => {
