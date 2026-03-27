@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { route } from "ziggy-js";
-import i18n from "@/i18n";
+import "@/i18n";
 
 window.route = route;
 const appName = import.meta.env.VITE_APP_NAME || "PrintForge";

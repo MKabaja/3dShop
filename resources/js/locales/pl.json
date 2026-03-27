@@ -109,4 +109,7 @@
         "removedFromCart": "Pozycja usunięta z koszyka.",
         "languageChanged": "Język zmieniono na {{lang}}."
     }
+    ,"accessibility": {
+        "skipToMain": "Przejdź do głównej zawartości"
+    }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import AppLayout from "@/Components/layouts/AppLayout";
+import AppLayout from "@/Layouts/AppLayout";
 
 function Landing() {
     return (

@@ -109,4 +109,7 @@
         "removedFromCart": "Item removed from cart.",
         "languageChanged": "Language changed to {{lang}}."
     }
+    ,"accessibility": {
+        "skipToMain": "Skip to main content"
+    }
 }
