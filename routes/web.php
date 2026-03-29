@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 
 // Gość
@@ -34,3 +35,6 @@ Route::middleware('auth')->group(function () {
 // Strona główna (dostępna dla wszystkich)
 
 Route::inertia('/', 'Landing');
+
+Route::post('/locale', [LocaleController::class, 'switch'])
+    ->name('locale.switch');
