@@ -1,9 +1,8 @@
 import { NAVIGATION_LINKS, AUTH_LINKS } from "@/constants/navbar";
-import { Link } from "@inertiajs/react";
+
 import { useTranslation } from "react-i18next";
 import NavElement from "./NavElement";
 import AuthMenu from "./AuthMenu";
-import UserPortraitButton from "./UserPortraitButton";
 
 export default function Navbar() {
     const { t } = useTranslation();

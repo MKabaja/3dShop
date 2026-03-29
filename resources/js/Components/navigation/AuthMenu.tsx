@@ -1,17 +1,15 @@
 import { type ReactNode, useState } from "react";
 import UserPortraitButton from "./UserPortraitButton";
 import Guesticon from "../ui/GuestIcon";
-
 import Dropdown from "./Dropdown";
 import type { NavigationLink } from "@/types/navigation/navbar";
-import type { AuthVariant } from "@/types/navigation/authMenu";
-
 import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@/constants/navbar";
 
 type AuthMenuProps = {
     variant: AuthVariant;
     initials?: string;
 };
+export type AuthVariant = "guest" | "user" | "admin";
 
 export default function AuthMenu({ initials, variant }: AuthMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
