@@ -31,7 +31,7 @@
         "home": "Strona główna",
         "shop": "Sklep",
         "about": "O nas",
-        "faq": "FAQ / Poradnik / Blog",
+        "faq": "FAQ ",
         "contact": "Kontakt"
     },
     "guestMenu": {
@@ -108,8 +108,36 @@
         "addedToCart": "Produkt dodany do koszyka.",
         "removedFromCart": "Pozycja usunięta z koszyka.",
         "languageChanged": "Język zmieniono na {{lang}}."
-    }
-    ,"accessibility": {
+    },
+    "aria": {
+        "navigation": {
+            "main": "Główna nawigacja",
+            "user": "Menu użytkownika",
+            "language": "Wybierz język",
+            "pagination": "Paginacja listy produktów"
+        },
+        "shopping": {
+            "cartQuantity": "Zmień ilość dla {{name}}",
+            "removeFromCart": "Usuń {{name}} z koszyka",
+            "addToFavorites": "Dodaj {{name}} do ulubionych",
+            "productRating": "Ocena: {{average}} z 5 gwiazdek",
+            "filterByCategory": "Filtrowanie produktów według kategorii: {{category}}",
+            "colorSelect": "Wybierz kolor figurki: {{color}}"
+        },
+        "forms": {
+            "showPassword": "Pokaż hasło",
+            "hidePassword": "Ukryj hasło",
+            "clearSearch": "Wyczyść pole wyszukiwania",
+            "error": "Błąd: {{message}}"
+        },
+        "components": {
+            "closeModal": "Zamknij dialog",
+            "openMenu": "Otwórz menu mobilne",
+            "expandDetails": "Pokaż więcej szczegółów o {{name}}",
+            "externalLink": "(otwiera się w nowej karcie)"
+        }
+    },
+    "accessibility": {
         "skipToMain": "Przejdź do głównej zawartości"
     }
 }
