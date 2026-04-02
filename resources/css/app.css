@@ -49,6 +49,12 @@
         var(--color-surface) 50%,
         var(--color-elevated) 100%
     );
+    --background-image-accent-gradient: linear-gradient(
+        135deg,
+        var(--color-accent-light) 0%,
+        var(--color-accent) 40%,
+        var(--color-accent-deep) 100%
+    );
 }
 
 @layer base {
@@ -60,5 +66,21 @@
         background-color: var(--color-base);
         color: var(--color-text-primary);
         font-family: var(--font-mono);
+    }
+    @layer components {
+        .text-gradient {
+            @apply font-bold;
+            background: linear-gradient(
+                90deg,
+                #94a3b8d2 0%,
+                #e2e8f0 40%,
+                #47556888 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            display: inline-block;
+        }
     }
 }
