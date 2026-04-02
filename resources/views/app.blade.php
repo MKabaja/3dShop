@@ -33,5 +33,6 @@
     </head>
     <body class="bg-base font-mono antialiased">
         @inertia
+        <div id="portal-root"></div>
     </body>
 </html>

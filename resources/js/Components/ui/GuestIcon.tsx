@@ -5,7 +5,7 @@ type GuestIconProps = {
     color?: string;
 } & ComponentPropsWithoutRef<"svg">;
 
-export default function Guesticon({
+export default function GuestIcon({
     size = 24,
     color = "currentColor",
     ...props

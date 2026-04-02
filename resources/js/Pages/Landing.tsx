@@ -1,6 +1,5 @@
 import React from "react";
 import AppLayout from "@/Layouts/AppLayout";
-import GuestLayout from "@/Layouts/Guestlayout";
 
 function Landing() {
     return (
@@ -23,7 +22,7 @@ function Landing() {
     );
 }
 Landing.layout = (page: React.ReactNode) => (
-    <GuestLayout title="Landing">{page}</GuestLayout>
+    <AppLayout title="Landing">{page}</AppLayout>
 );
 
 export default Landing;

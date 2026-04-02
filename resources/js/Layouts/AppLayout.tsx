@@ -1,8 +1,8 @@
 import { type ReactNode, useEffect } from "react";
-import type { PageProps } from "../types/global/pageProps";
-import { Head, usePage } from "@inertiajs/react";
+import { Head } from "@inertiajs/react";
 import Navbar from "../Components/navigation/Navbar";
 import { useTranslation } from "react-i18next";
+import usePageInfo from "@/hooks/usePageInfo";
 
 interface Props {
     children: ReactNode;
@@ -17,12 +17,8 @@ export default function AppLayout({
     description,
     ogImage,
 }: Props) {
-    const { url, props: pageProps } = usePage<PageProps>();
+    const { canonicalUrl, locale } = usePageInfo();
     const { i18n, t } = useTranslation();
-
-    const base = pageProps.app_url ?? (import.meta.env.VITE_APP_URL as string);
-    const canonicalUrl = base ? new URL(url, base).href : url;
-    const locale = pageProps.locale ?? "en";
 
     // Sync during  Intentional changes
     useEffect(() => {

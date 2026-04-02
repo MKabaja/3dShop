@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <nav className="flex  px-8 py-1 relative bg-elevated  items-center border-b border-border">
             {/* Logo & bannner */}
-            <Logo size="lg" color="#22d3ee" />
+            <Logo size="sm" />
 
             {/* Naviagtion */}
             <ul className=" flex mx-auto space-x-3">

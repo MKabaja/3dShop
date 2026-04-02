@@ -37,7 +37,7 @@ export default function GuestLayout({ children, title }: Props) {
                 <link rel="canonical" href={canonicalUrl} />
             </Head>
 
-            <div className="min-h-screen  gap-8 flex flex-col items-center justify-center bg-base p-5">
+            <div className="min-h-screen gap-8 flex flex-col items-center justify-center bg-base p-5">
                 <Logo size="lg" />
 
                 <main
