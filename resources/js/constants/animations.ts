@@ -51,6 +51,34 @@ const springTransition: Transition = {
     type: "spring",
     stiffness: 350,
     damping: 25,
+    duration: 0.2,
+};
+/**
+ * Logo animation variants.
+ *
+ * On hover: scales up to 1.2 and rotates 10 degrees.
+ * On tap: scales down to 0.9 and rotates -2 degrees.
+ * Transitions use the defined `springTransition` for a bouncy effect.
+ * Initial state is scale 1 and rotate 0.
+ */
+const logoVariants: Variants = {
+    initial: { scale: 1, rotate: 0 },
+    hover: {
+        scale: 1.2,
+        rotate: 10,
+        transition: { duration: 0.3 },
+    },
+    tap: {
+        scale: 0.9,
+        rotate: -2,
+        transition: { ...springTransition },
+    },
 };
 
-export { containerVariants, itemVariants, dropdownVariants, springTransition };
+export {
+    containerVariants,
+    itemVariants,
+    dropdownVariants,
+    springTransition,
+    logoVariants,
+};

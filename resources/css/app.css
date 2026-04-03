@@ -43,6 +43,7 @@
     --shadow-user-menu:
         5px 5px 10px 0px rgba(0, 0, 0, 0.61),
         inset -2px -4px 10px 0px rgba(124, 124, 124, 0.06);
+
     --background-image-user-menu: linear-gradient(
         to bottom,
         var(--color-surface) 0%,

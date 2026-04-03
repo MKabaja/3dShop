@@ -1,14 +1,15 @@
 import { type ReactNode } from "react";
-import UserPortraitButton from "./UserPortraitButton";
-import { createPortal } from "react-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import type { NavigationLink } from "@/types/navigation/navbar";
 import GuestIcon from "../ui/GuestIcon";
 import Dropdown from "./Dropdown";
-import type { NavigationLink } from "@/types/navigation/navbar";
+import UserPortraitButton from "./UserPortraitButton";
+
+import { createPortal } from "react-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@/constants/navbar";
 import { useDropdown } from "@/hooks/useDropdown";
 
-type AuthVariant = "guest" | "user" | "admin";
+export type AuthVariant = "guest" | "user" | "admin";
 type AuthMenuProps = {
     variant: AuthVariant;
     initials?: string;
@@ -43,11 +44,11 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
     const { isOpen, close, toggle } = useDropdown();
 
     return (
-        <div className="relative">
+        <div className="relative ml-auto">
             <UserPortraitButton
                 isOpen={isOpen}
-                arrowColor="#67e8f9"
-                className="text-accent-muted hover:bg-hover"
+                arrowColor="#0891b2"
+                className="text-accent-muted "
                 onClick={toggle}
             >
                 {strategyMap[variant].content(initials)}

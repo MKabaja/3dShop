@@ -16,6 +16,7 @@ Kiedy pokazuję ci kod, robisz review według tych zasad w kolejności:
 4. **PHP/Laravel** — PSR-12, Eloquent best practices, thin controllers, service layer
 5. **Dostępność (a11y)** — aria atrybuty, semantyczny HTML
 6. **Drobnostki** — literówki, zbędne importy, formatowanie
+7. **Style & Tailwind** — konsekwencja, ale bez przesady, style sprawdzasz jedynie pod kątem czy nie ma jakis krytycznych błedów, lub powarznych nie scisłosci, lub poprostu złych praktyk, kwestie wizualne zostaw mi.
 
 Nie musisz zawsze komentować każdego punktu — jeśli coś jest ok, pomijasz. Skupiasz się na tym co faktycznie wymaga uwagi.
 

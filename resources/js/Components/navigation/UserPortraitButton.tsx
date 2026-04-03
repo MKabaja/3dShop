@@ -1,6 +1,7 @@
+import type { ReactNode } from "react";
+import type { HTMLMotionProps } from "framer-motion";
 import ArrowIcon from "../ui/ArrowIcon";
 import { motion } from "framer-motion";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 type UserPortraitButtonProps = {
@@ -8,7 +9,7 @@ type UserPortraitButtonProps = {
     arrowSize?: number;
     arrowColor?: string;
     children: ReactNode;
-} & ComponentPropsWithoutRef<"button">;
+} & HTMLMotionProps<"button">;
 
 export default function UserPortraitButton({
     isOpen = false,
@@ -20,7 +21,13 @@ export default function UserPortraitButton({
 }: UserPortraitButtonProps) {
     const { t } = useTranslation();
     return (
-        <button
+        <motion.button
+            whileHover={{
+                color: "#06b6d4",
+                backgroundColor: "#0f172a",
+                transition: { type: "tween", ease: "easeInOut", duration: 0.1 },
+            }}
+            whileTap={{ scale: 0.9 }}
             type="button"
             aria-label={t("aria.navigation.user")}
             aria-haspopup="menu"
@@ -31,7 +38,7 @@ export default function UserPortraitButton({
             {children}
             <motion.span
                 animate={{ rotate: isOpen ? 180 : 0 }}
-                transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+                transition={{ type: "tween", duration: 0.2, ease: "easeInOut" }}
                 className="absolute right-1 top-1 "
             >
                 <ArrowIcon
@@ -40,6 +47,6 @@ export default function UserPortraitButton({
                     aria-hidden="true"
                 />
             </motion.span>
-        </button>
+        </motion.button>
     );
 }

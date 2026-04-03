@@ -1,10 +1,10 @@
 import type { NavigationLink } from "@/types/navigation/navbar";
 import { Link } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
-import type { ComponentPropsWithoutRef } from "react";
 
-type NavElementProps = { isText?: boolean } & NavigationLink &
-    Omit<ComponentPropsWithoutRef<"li">, "id">;
+import { motion } from "framer-motion";
+
+type NavElementProps = NavigationLink;
 
 export default function NavElement({
     href,
@@ -13,8 +13,17 @@ export default function NavElement({
 }: NavElementProps) {
     const { t } = useTranslation();
     return (
-        <li {...props}>
+        <motion.li
+            className=" px-3 py-1 rounded transition-colors  cursor-pointer"
+            {...props}
+            whileHover={{
+                color: "#f1f5f9",
+                backgroundColor: "#0f172a",
+                transition: { type: "tween", ease: "easeInOut", duration: 0.1 },
+            }}
+            whileTap={{ scale: 0.9 }}
+        >
             <Link href={href}>{t(labelKey)}</Link>
-        </li>
+        </motion.li>
     );
 }
