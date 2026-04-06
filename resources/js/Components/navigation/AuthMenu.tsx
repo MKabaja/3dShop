@@ -1,13 +1,14 @@
-import { type ReactNode } from "react";
+import { type ReactNode, useRef } from "react";
 import type { NavigationLink } from "@/types/navigation/navbar";
 import GuestIcon from "../ui/GuestIcon";
 import Dropdown from "./Dropdown";
 import UserPortraitButton from "./UserPortraitButton";
-
 import Overlay from "./Overlay";
+
 import { AnimatePresence } from "framer-motion";
 import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@/constants/navbar";
 import { useDropdown } from "@/hooks/useDropdown";
+import useFocusReturn from "@/hooks/useFocusReturn";
 
 export type AuthVariant = "guest" | "user" | "admin";
 type AuthMenuProps = {
@@ -42,10 +43,14 @@ const strategyMap: StrategyMap = {
 
 export default function AuthMenu({ initials, variant }: AuthMenuProps) {
     const { isOpen, close, toggle } = useDropdown();
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
+    useFocusReturn(isOpen, buttonRef);
 
     return (
         <div className="relative ml-5">
             <UserPortraitButton
+                ref={buttonRef}
                 isOpen={isOpen}
                 arrowColor="#0891b2"
                 className="text-accent-muted "
