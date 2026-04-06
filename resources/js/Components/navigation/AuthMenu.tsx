@@ -63,7 +63,10 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
                 {isOpen && (
                     <>
                         <Overlay onClose={close} />
-                        <Dropdown links={strategyMap[variant].links} />
+                        <Dropdown
+                            links={strategyMap[variant].links}
+                            isOpen={isOpen}
+                        />
                     </>
                 )}
             </AnimatePresence>

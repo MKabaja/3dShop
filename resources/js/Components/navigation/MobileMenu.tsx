@@ -44,7 +44,7 @@ export default function MobileMenu() {
                 {isOpen && (
                     <div id="mobile-menu" role="dialog" aria-modal="true">
                         <Overlay onClose={close} />
-                        <Dropdown links={NAVIGATION_LINKS} />
+                        <Dropdown links={NAVIGATION_LINKS} isOpen={isOpen} />
                     </div>
                 )}
             </AnimatePresence>

@@ -2,23 +2,27 @@ import { NavigationLink } from "@/types/navigation/navbar";
 import { Link } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import {
-    itemVariants,
-    dropdownVariants,
-    navVariants,
-} from "@/constants/animations";
+import { itemVariants, dropdownVariants } from "@/constants/animations";
+import useRovingFocus from "@/hooks/useRovingFocus";
+import { useRef } from "react";
 
 type DropdownProps = {
     links: NavigationLink[];
+    isOpen: boolean;
 };
-export default function Dropdown({ links }: DropdownProps) {
+export default function Dropdown({ links, isOpen }: DropdownProps) {
     const { t } = useTranslation();
+    const containerRef = useRef<HTMLUListElement>(null);
+
+    useRovingFocus(containerRef, isOpen);
+
     const classes =
         "font-light text-xs absolute right-0 top-full bg-card shadow-md rounded-md px-3 py-4 pr-12 z-50";
     return (
         <motion.ul
             role="menu"
             variants={dropdownVariants}
+            ref={containerRef}
             initial="hidden"
             animate="visible"
             exit="exit"

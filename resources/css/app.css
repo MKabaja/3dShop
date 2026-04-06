@@ -68,6 +68,15 @@
         color: var(--color-text-primary);
         font-family: var(--font-mono);
     }
+    a {
+        color: var(--color-text-secondary);
+    }
+    :focus-visible {
+        outline: 2px solid var(--color-accent-deep);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
     @layer components {
         .text-gradient {
             @apply font-bold;
