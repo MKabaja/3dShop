@@ -2,7 +2,11 @@ import { NavigationLink } from "@/types/navigation/navbar";
 import { Link } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { itemVariants, dropdownVariants } from "@/constants/animations";
+import {
+    itemVariants,
+    dropdownVariants,
+    navVariants,
+} from "@/constants/animations";
 
 type DropdownProps = {
     links: NavigationLink[];
@@ -18,27 +22,27 @@ export default function Dropdown({ links }: DropdownProps) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className={classes}
+            className={`${classes} flex flex-col space-y-4`}
         >
-            <motion.div
-                variants={dropdownVariants}
-                className="flex flex-col space-y-4"
-            >
-                {links.map((link) => (
-                    <motion.li
+            {links.map((link) => (
+                <motion.li
+                    key={link.href}
+                    variants={itemVariants}
+                    transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 28,
+                    }}
+                >
+                    <Link
+                        href={link.href}
                         role="menuitem"
-                        key={link.href}
-                        variants={itemVariants}
-                        transition={{
-                            type: "spring",
-                            stiffness: 400,
-                            damping: 28,
-                        }}
+                        className="nav-link-focus px-2 py-1 rounded hover:text-text-primary hover:bg-elevated transition-colors"
                     >
-                        <Link href={link.href}>{t(link.labelKey)}</Link>
-                    </motion.li>
-                ))}
-            </motion.div>
+                        {t(link.labelKey)}
+                    </Link>
+                </motion.li>
+            ))}
         </motion.ul>
     );
 }

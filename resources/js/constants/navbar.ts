@@ -9,7 +9,7 @@ export const NAVIGATION_LINKS: NavigationLink[] = [
 ];
 
 export const AUTH_LINKS: NavigationLink[] = [
-    { labelKey: "guestMenu.login", href: " /login", id: "login-link" },
+    { labelKey: "guestMenu.login", href: "/login", id: "login-link" },
     { labelKey: "guestMenu.register", href: "/register", id: "register-link" },
 ];
 
