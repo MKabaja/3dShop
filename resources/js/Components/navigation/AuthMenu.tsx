@@ -4,8 +4,8 @@ import GuestIcon from "../ui/GuestIcon";
 import Dropdown from "./Dropdown";
 import UserPortraitButton from "./UserPortraitButton";
 
-import { createPortal } from "react-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import Overlay from "./Overlay";
+import { AnimatePresence } from "framer-motion";
 import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@/constants/navbar";
 import { useDropdown } from "@/hooks/useDropdown";
 
@@ -44,7 +44,7 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
     const { isOpen, close, toggle } = useDropdown();
 
     return (
-        <div className="relative ml-auto">
+        <div className="relative ml-5">
             <UserPortraitButton
                 isOpen={isOpen}
                 arrowColor="#0891b2"
@@ -57,18 +57,7 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
             <AnimatePresence>
                 {isOpen && (
                     <>
-                        {createPortal(
-                            <motion.div
-                                key="backdrop"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                className="fixed inset-0 z-40 backdrop-blur-sm bg-black/10"
-                                onClick={close}
-                            />,
-                            document.getElementById("portal-root") ??
-                                document.body,
-                        )}
+                        <Overlay onClose={close} />
                         <Dropdown links={strategyMap[variant].links} />
                     </>
                 )}
