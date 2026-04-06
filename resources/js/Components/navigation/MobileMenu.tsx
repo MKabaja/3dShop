@@ -18,7 +18,7 @@ export default function MobileMenu() {
     useFocusReturn(isOpen, buttonRef);
 
     return (
-        <div className=" ml-auto flex  ">
+        <div className=" ml-auto flex  md:hidden">
             <motion.button
                 ref={buttonRef}
                 variants={navVariants}
@@ -28,7 +28,6 @@ export default function MobileMenu() {
                 className=" text-text-secondary p-2"
                 type="button"
                 onClick={toggle}
-                aria-controls="mobile-menu"
                 aria-label={
                     isOpen
                         ? t("aria.navigation.mobile.close")
@@ -42,10 +41,14 @@ export default function MobileMenu() {
 
             <AnimatePresence>
                 {isOpen && (
-                    <div id="mobile-menu" role="dialog" aria-modal="true">
+                    <>
                         <Overlay onClose={close} />
-                        <Dropdown links={NAVIGATION_LINKS} isOpen={isOpen} />
-                    </div>
+                        <Dropdown
+                            links={NAVIGATION_LINKS}
+                            isOpen={isOpen}
+                            onClose={close}
+                        />
+                    </>
                 )}
             </AnimatePresence>
         </div>

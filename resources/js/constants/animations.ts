@@ -74,6 +74,25 @@ const logoVariants: Variants = {
         transition: { ...springTransition },
     },
 };
+const navVariants: Variants = {
+    initial: {
+        color: "#94a3b8",
+        backgroundColor: "transparent",
+        scale: 1,
+    },
+    hover: {
+        color: "#f1f5f9",
+        backgroundColor: "#0f172a",
+        transition: {
+            type: "tween",
+            ease: "easeInOut",
+            duration: 0.1,
+        },
+    },
+    tap: {
+        scale: 0.9,
+    },
+};
 
 export {
     containerVariants,
@@ -81,4 +100,5 @@ export {
     dropdownVariants,
     springTransition,
     logoVariants,
+    navVariants,
 };

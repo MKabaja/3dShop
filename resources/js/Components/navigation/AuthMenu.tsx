@@ -66,6 +66,7 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
                         <Dropdown
                             links={strategyMap[variant].links}
                             isOpen={isOpen}
+                            onClose={close}
                         />
                     </>
                 )}

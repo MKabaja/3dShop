@@ -1,6 +1,7 @@
 import type { NavigationLink } from "@/types/navigation/navbar";
 import { Link } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
+import { navVariants } from "@/constants/animations";
 
 import { motion } from "framer-motion";
 
@@ -16,12 +17,10 @@ export default function NavElement({
         <motion.li
             className=" px-3 py-1 rounded transition-colors  cursor-pointer"
             {...props}
-            whileHover={{
-                color: "#f1f5f9",
-                backgroundColor: "#0f172a",
-                transition: { type: "tween", ease: "easeInOut", duration: 0.1 },
-            }}
-            whileTap={{ scale: 0.9 }}
+            variants={navVariants}
+            initial="initial"
+            whileHover="hover"
+            whileTap="tap"
         >
             <Link href={href}>{t(labelKey)}</Link>
         </motion.li>

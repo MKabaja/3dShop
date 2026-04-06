@@ -4,6 +4,7 @@ import type { AuthVariant } from "./AuthMenu";
 
 import Logo from "../ui/Logo";
 import AuthMenu from "./AuthMenu";
+import MobileMenu from "./MobileMenu";
 
 import { usePage } from "@inertiajs/react";
 import NavigationList from "./NavigationList";
@@ -20,14 +21,13 @@ export default function Navbar() {
     const user = pageProps.auth?.user;
 
     return (
-        <nav className="flex px-8 py-1 relative bg-elevated  items-center border-b border-border ">
-            {/* Logo & banner */}
+        <nav className="flex px-8 py-1 relative bg-elevated items-center border-b border-border">
             <Logo size="sm" />
 
-            {/* Navigation */}
             <NavigationList />
 
-            {/* guestMenu */}
+            <MobileMenu />
+
             <AuthMenu
                 variant={getAuthVariant(user)}
                 initials={getUserInitials(user)}

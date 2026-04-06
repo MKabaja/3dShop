@@ -112,6 +112,10 @@
     "aria": {
         "navigation": {
             "main": "Główna nawigacja",
+            "mobile": {
+                "open": "Otwórz menu mobilne",
+                "close": "Zamknij menu mobilne"
+            },
             "user": "Menu użytkownika",
             "language": "Wybierz język",
             "pagination": "Paginacja listy produktów"

@@ -112,6 +112,10 @@
     "aria": {
         "navigation": {
             "main": "Main navigation",
+            "mobile": {
+                "open": "Open mobile menu",
+                "close": "Close mobile menu"
+            },
             "user": "User menu",
             "language": "Select language",
             "pagination": "Product list pagination"
