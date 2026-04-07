@@ -1,15 +1,14 @@
 import type { PageProps } from "@/types/global/pageProps";
-import type { UserRole } from "@/types/models";
+import type { UserRole, User } from "@/types/models";
 import type { AuthVariant } from "./AuthMenu";
 
 import Logo from "../ui/Logo";
 import AuthMenu from "./AuthMenu";
 import MobileMenu from "./MobileMenu";
 
+import { useTranslation } from "react-i18next";
 import { usePage } from "@inertiajs/react";
 import NavigationList from "./NavigationList";
-
-type User = PageProps["auth"]["user"];
 
 const USER_ROLE_TO_AUTH_VARIANT: Record<UserRole, AuthVariant> = {
     admin: "admin",
@@ -17,11 +16,16 @@ const USER_ROLE_TO_AUTH_VARIANT: Record<UserRole, AuthVariant> = {
 };
 
 export default function Navbar() {
+    const { t } = useTranslation();
+
     const { props: pageProps } = usePage<PageProps>();
     const user = pageProps.auth?.user;
 
     return (
-        <nav className="flex px-8 py-1 relative bg-elevated items-center border-b border-border">
+        <nav
+            className="flex px-8 py-1 relative bg-elevated items-center border-b border-border"
+            aria-label={t("aria.navigation.main")}
+        >
             <Logo size="sm" />
 
             <NavigationList />
@@ -38,7 +42,7 @@ export default function Navbar() {
 
 function getAuthVariant(user: User | null): AuthVariant {
     if (!user) return "guest";
-    return USER_ROLE_TO_AUTH_VARIANT[user.role as UserRole];
+    return USER_ROLE_TO_AUTH_VARIANT[user.role];
 }
 
 function getUserInitials(user: User | null): string | undefined {

@@ -4,7 +4,7 @@ import GuestIcon from "../ui/GuestIcon";
 import Dropdown from "./Dropdown";
 import UserPortraitButton from "./UserPortraitButton";
 import Overlay from "./Overlay";
-
+import { router } from "@inertiajs/react";
 import { AnimatePresence } from "framer-motion";
 import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@/constants/navbar";
 import { useDropdown } from "@/hooks/useDropdown";
@@ -67,6 +67,11 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
                             links={strategyMap[variant].links}
                             isOpen={isOpen}
                             onClose={close}
+                            onLogout={
+                                variant !== "guest"
+                                    ? () => router.post("/logout")
+                                    : undefined
+                            }
                         />
                     </>
                 )}

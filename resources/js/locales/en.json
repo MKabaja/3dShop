@@ -43,13 +43,11 @@
         "dashboard": "Customer Dashboard",
         "orders": "My Orders",
         "cart": "Cart",
-        "favorites": "Favorites",
-        "logout": "Logout"
+        "favorites": "Favorites"
     },
     "adminMenu": {
         "adminDashboard": "Admin Dashboard",
-        "manageStore": "Manage Store",
-        "logout": "Logout"
+        "manageStore": "Manage Store"
     },
     "auth": {
         "email": "Email",
@@ -60,7 +58,8 @@
         "submitLogin": "Sign in",
         "submitRegister": "Sign up",
         "alreadyAccount": "Already have an account?",
-        "noAccount": "Don't have an account?"
+        "noAccount": "Don't have an account?",
+        "logout": "Logout"
     },
     "shop": {
         "searchPlaceholder": "Search for products...",

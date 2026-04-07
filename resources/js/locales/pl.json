@@ -43,13 +43,11 @@
         "dashboard": "Panel klienta",
         "orders": "Moje zamówienia",
         "cart": "Koszyk",
-        "favorites": "Ulubione",
-        "logout": "Wyloguj"
+        "favorites": "Ulubione"
     },
     "adminMenu": {
         "adminDashboard": "Panel admina",
-        "manageStore": "Zarządzaj sklepem",
-        "logout": "Wyloguj"
+        "manageStore": "Zarządzaj sklepem"
     },
     "auth": {
         "email": "Email",
@@ -60,7 +58,8 @@
         "submitLogin": "Zaloguj się",
         "submitRegister": "Zarejestruj się",
         "alreadyAccount": "Masz już konto?",
-        "noAccount": "Nie masz konta?"
+        "noAccount": "Nie masz konta?",
+        "logout": "Wyloguj"
     },
     "shop": {
         "searchPlaceholder": "Szukaj produktów...",

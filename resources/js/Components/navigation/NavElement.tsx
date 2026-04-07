@@ -21,6 +21,7 @@ export default function NavElement({
             initial="initial"
             whileHover="hover"
             whileTap="tap"
+            tabIndex={-1}
         >
             <Link href={href}>{t(labelKey)}</Link>
         </motion.li>

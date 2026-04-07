@@ -10,8 +10,14 @@ type DropdownProps = {
     links: NavigationLink[];
     isOpen: boolean;
     onClose?: () => void;
+    onLogout?: () => void;
 };
-export default function Dropdown({ links, isOpen, onClose }: DropdownProps) {
+export default function Dropdown({
+    links,
+    isOpen,
+    onClose,
+    onLogout,
+}: DropdownProps) {
     const { t } = useTranslation();
     const containerRef = useRef<HTMLUListElement>(null);
 
@@ -54,6 +60,20 @@ export default function Dropdown({ links, isOpen, onClose }: DropdownProps) {
                     </Link>
                 </motion.li>
             ))}
+            {onLogout && (
+                <motion.li
+                    variants={itemVariants}
+                    transition={{ type: "spring", stiffness: 400, damping: 28 }}
+                >
+                    <button
+                        role="menuitem"
+                        onClick={onLogout}
+                        className="px-2 py-1 rounded hover:text-text-primary hover:bg-elevated transition-colors w-full text-left font-light text-xs"
+                    >
+                        {t("auth.logout")}
+                    </button>
+                </motion.li>
+            )}
         </motion.ul>
     );
 }
