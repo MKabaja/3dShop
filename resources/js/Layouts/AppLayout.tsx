@@ -63,7 +63,11 @@ export default function AppLayout({
                 <Navbar />
             </header>
 
-            <main id="main-content" tabIndex={-1}>
+            <main
+                id="main-content"
+                tabIndex={-1}
+                className="w-screen h-screen overflow-hidden"
+            >
                 {children}
             </main>
 
