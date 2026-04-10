@@ -1,38 +1,49 @@
 import { Points, useTexture } from "@react-three/drei";
-import { useMemo } from "react";
-
+import { useFrame } from "@react-three/fiber";
+import { useMemo, useRef } from "react";
 import * as THREE from "three";
+import { calculateWaveHeight, generateRippleGrid } from "@/utils/rippleUtils";
+import { rippleConfig } from "@/constants/rippleConfig";
 
 THREE.ColorManagement.enabled = false;
 
 function RipplePoints() {
-    const texture = useTexture("/textures/circle.png");
-    const color = "#22d3ee";
-    const count = 100;
-    const sap = 3;
-    console.log(texture);
-    const positions = useMemo(() => {
-        let positions = [];
+    const { color, pointCount, pointSpacing, texturePath } = rippleConfig;
+    const texture = useTexture(texturePath);
+    const pointsRef = useRef<THREE.Points>(null);
+    const time = useRef(0);
 
-        for (let xi = 0; xi < count; xi++) {
-            for (let zi = 0; zi < count; zi++) {
-                let x = sap * (xi - count / 2);
-                let z = sap * (zi - count / 2);
-                const y = 0;
+    const positions = useMemo(() => generateRippleGrid(rippleConfig), []);
 
-                positions.push(x, y, z);
+    useFrame(() => {
+        time.current += 15;
+
+        if (!pointsRef.current) return;
+
+        const positionAttribute =
+            pointsRef.current.geometry.attributes.position;
+
+        let index = 0;
+        for (let indexX = 0; indexX < pointCount; indexX++) {
+            for (let indexZ = 0; indexZ < pointCount; indexZ++) {
+                const x = pointSpacing * (indexX - pointCount / 2);
+                const z = pointSpacing * (indexZ - pointCount / 2);
+                positionAttribute.setY(
+                    index,
+                    calculateWaveHeight(x, z, time.current, rippleConfig),
+                );
+                index++;
             }
         }
-
-        return new Float32Array(positions);
-    }, [count, sap]);
+        positionAttribute.needsUpdate = true;
+    });
 
     return (
-        <Points positions={positions}>
+        <Points ref={pointsRef} positions={positions}>
             <pointsMaterial
                 map={texture}
                 color={color}
-                size={1}
+                size={1.5}
                 transparent
                 alphaTest={0.5}
             />
