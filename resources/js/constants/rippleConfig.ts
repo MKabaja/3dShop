@@ -20,10 +20,10 @@ export interface RippleConfig {
  * This configuration is used in the `RipplePoints` component to create and animate the ripple effect.
  */
 export const rippleConfig: RippleConfig = {
-    pointCount: 150,
-    pointSpacing: 3,
-    waveFrequency: 0.0009,
-    amplitude: 2.5,
+    pointCount: 80,
+    pointSpacing: 3.8,
+    waveFrequency: 0.0008,
+    amplitude: 2,
     color: "#0e7490",
     texturePath: "/textures/circle.png",
 };
