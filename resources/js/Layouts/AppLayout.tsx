@@ -59,14 +59,14 @@ export default function AppLayout({
                 {t("accessibility.skipToMain")}
             </a>
 
-            <header>
+            <header className="relative z-20">
                 <Navbar />
             </header>
 
             <main
                 id="main-content"
                 tabIndex={-1}
-                className="w-screen h-screen overflow-hidden"
+                className="min-h-screen w-full"
             >
                 {children}
             </main>

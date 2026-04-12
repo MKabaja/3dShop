@@ -11,7 +11,7 @@ export default function Overlay({ onClose }: OverlayProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 backdrop-blur-sm bg-black/10"
+            className="fixed inset-0 z-10 backdrop-blur-sm bg-black/10"
             onClick={onClose}
         />,
         document.getElementById("portal-root") ?? document.body,

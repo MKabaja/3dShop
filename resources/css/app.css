@@ -56,6 +56,12 @@
         var(--color-accent) 40%,
         var(--color-accent-deep) 100%
     );
+
+    /* Definiowanie z-index za pomocą zmiennych --z-* */
+    --z-canvas: 0;
+    --z-overlay: 10;
+    --z-header: 20;
+    --z-dropdown: 50;
 }
 
 @layer base {
