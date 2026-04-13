@@ -1,0 +1,56 @@
+{
+    "hero": {
+        "title": "Masz pomysł? Zamienimy go w gotowy produkt.",
+        "subtitle": "Projektujemy i drukujemy elementy dopasowane do Twoich potrzeb — od dekoracji po funkcjonalne rozwiązania do domu i biura.",
+        "ctaPrimary": "Zrealizuj swój pomysł",
+        "ctaSecondary": "Zobacz jak to działa",
+        "trust": "Nie potrzebujesz modelu 3D — pomożemy Ci go stworzyć."
+    },
+    "features": {
+        "title": "Dlaczego warto",
+        "items": [
+            {
+                "title": "Projekt od zera lub na podstawie pomysłu",
+                "description": "Nie musisz mieć gotowego modelu — wystarczy opis lub inspiracja."
+            },
+            {
+                "title": "Precyzyjny druk i dopracowane detale",
+                "description": "Dbamy o jakość wykonania i dobór materiałów do zastosowania."
+            },
+            {
+                "title": "Wsparcie na każdym etapie",
+                "description": "Doradzamy, optymalizujemy i pomagamy podjąć dobre decyzje."
+            }
+        ]
+    },
+    "howItWorks": {
+        "title": "Jak to działa",
+        "steps": [
+            {
+                "title": "Opowiedz nam o swoim pomyśle",
+                "description": "Może to być opis, zdjęcie lub szkic."
+            },
+            {
+                "title": "Przygotujemy projekt i wycenę",
+                "description": "Dopasowujemy szczegóły i ustalamy finalną wersję."
+            },
+            {
+                "title": "Drukujemy i wysyłamy gotowy produkt",
+                "description": "Otrzymujesz coś stworzonego dokładnie pod Twoje potrzeby."
+            }
+        ]
+    },
+    "useCases": {
+        "title": "Co możesz stworzyć",
+        "items": [
+            "Organizery i akcesoria do biura",
+            "Personalizowane dekoracje",
+            "Rozwiązania na konkretny problem",
+            "Projekty na zamówienie"
+        ]
+    },
+    "cta": {
+        "title": "Gotowy na swój projekt?",
+        "button": "Rozpocznij"
+    }
+}

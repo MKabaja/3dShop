@@ -16,9 +16,6 @@ export default function HeroSection() {
                 </div>
                 <p>Nie potrzebujesz modelu 3D — pomożemy Ci go stworzyć.</p>
             </div>
-            <div className="hidden md:flex">
-                <ModelPlaceholder />
-            </div>
         </section>
     );
 }

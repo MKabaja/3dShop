@@ -1,0 +1,56 @@
+{
+    "hero": {
+        "title": "Got an idea? We’ll turn it into a real product.",
+        "subtitle": "We design and 3D print custom parts tailored to your needs — from decorative pieces to practical solutions for your home or workspace.",
+        "ctaPrimary": "Start your project",
+        "ctaSecondary": "See how it works",
+        "trust": "No 3D model needed — we’ll help you create one."
+    },
+    "features": {
+        "title": "Why choose us",
+        "items": [
+            {
+                "title": "From idea to design",
+                "description": "No model? No problem. Send us your idea or inspiration and we’ll handle the rest."
+            },
+            {
+                "title": "Precision and quality",
+                "description": "We focus on clean details and choose the right materials for your use case."
+            },
+            {
+                "title": "Guidance at every step",
+                "description": "We help you make the right decisions to get the best possible result."
+            }
+        ]
+    },
+    "howItWorks": {
+        "title": "How it works",
+        "steps": [
+            {
+                "title": "Tell us what you need",
+                "description": "Send a description, sketch, or reference."
+            },
+            {
+                "title": "Get a design and quote",
+                "description": "We refine the details and prepare a proposal for you."
+            },
+            {
+                "title": "We print and deliver",
+                "description": "You receive a product made specifically for your needs."
+            }
+        ]
+    },
+    "useCases": {
+        "title": "What you can create",
+        "items": [
+            "Desk organizers and workspace accessories",
+            "Custom decorative pieces",
+            "Problem-solving custom parts",
+            "Fully custom projects"
+        ]
+    },
+    "cta": {
+        "title": "Ready to start your project?",
+        "button": "Get started"
+    }
+}
