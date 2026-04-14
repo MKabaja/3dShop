@@ -4,9 +4,10 @@ import pl from "../locales/pl.json";
 
 declare module "i18next" {
     interface CustomTypeOptions {
-        defaultNS: "translation";
+        defaultNS: "common";
         resources: {
-            translation: typeof pl;
+            common: typeof import("@/locales/pl/plCommon.json");
+            landing: typeof import("@/locales/pl/plLanding.json");
         };
 
         allowObjectInHTMLChildren: true;

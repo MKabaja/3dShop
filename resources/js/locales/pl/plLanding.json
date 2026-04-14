@@ -1,10 +1,14 @@
 {
     "hero": {
-        "title": "Masz pomysł? Zamienimy go w gotowy produkt.",
+        "title": {
+            "before": "Masz pomysł? Zamienimy go w",
+            "highlight": "gotowy produkt."
+        },
         "subtitle": "Projektujemy i drukujemy elementy dopasowane do Twoich potrzeb — od dekoracji po funkcjonalne rozwiązania do domu i biura.",
         "ctaPrimary": "Zrealizuj swój pomysł",
         "ctaSecondary": "Zobacz jak to działa",
-        "trust": "Nie potrzebujesz modelu 3D — pomożemy Ci go stworzyć."
+        "trust": "Nie potrzebujesz modelu 3D — pomożemy Ci go stworzyć.",
+        "badge": "Druk 3D na zamówienie"
     },
     "features": {
         "title": "Dlaczego warto",

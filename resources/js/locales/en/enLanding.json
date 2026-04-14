@@ -1,10 +1,15 @@
 {
     "hero": {
-        "title": "Got an idea? We’ll turn it into a real product.",
+        "title": {
+            "before": "Got an idea? We’ll turn it into a",
+            "highlight": "real product."
+        },
+
         "subtitle": "We design and 3D print custom parts tailored to your needs — from decorative pieces to practical solutions for your home or workspace.",
         "ctaPrimary": "Start your project",
         "ctaSecondary": "See how it works",
-        "trust": "No 3D model needed — we’ll help you create one."
+        "trust": "No 3D model needed — we’ll help you create one.",
+        "badge": "Custom 3D Printing"
     },
     "features": {
         "title": "Why choose us",

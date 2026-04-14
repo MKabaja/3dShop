@@ -8,11 +8,17 @@
 @source '../**/*.ts';
 
 @theme {
-    /* Fonty */
+    /* ----------------------------------------------------------
+       Typography
+       ---------------------------------------------------------- */
     --font-sans: "Oxanium", ui-sans-serif, system-ui, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
-    /* Tła */
+    /* ----------------------------------------------------------
+       Backgrounds / Surfaces
+       Generates: bg-base, bg-surface, bg-elevated, bg-card,
+                  bg-hover, bg-border
+       ---------------------------------------------------------- */
     --color-base: #050508;
     --color-surface: #0a0a12;
     --color-elevated: #0f0f1a;
@@ -20,51 +26,210 @@
     --color-hover: #1e1e30;
     --color-border: #1e293b;
 
-    /* Akcent – cyjan */
+    /* ----------------------------------------------------------
+       Accent — Cyan
+       Generates: bg-accent, text-accent, border-accent, etc.
+       ---------------------------------------------------------- */
     --color-accent: #22d3ee;
     --color-accent-light: #67e8f9;
     --color-accent-hover: #06b6d4;
     --color-accent-deep: #0891b2;
     --color-accent-muted: #0e7490;
 
-    /* Tekst */
+    /* ----------------------------------------------------------
+       Text
+       Generates: text-text-primary, text-text-secondary, etc.
+       ---------------------------------------------------------- */
     --color-text-primary: #f1f5f9;
     --color-text-secondary: #94a3b8;
     --color-text-muted: #475569;
     --color-text-accent: #22d3ee;
 
-    /* Status */
+    /* ----------------------------------------------------------
+       Status Colors
+       Generates: bg-success, text-error, border-warning, etc.
+       ---------------------------------------------------------- */
     --color-success: #4ade80;
     --color-error: #f87171;
     --color-warning: #fbbf24;
     --color-info: #818cf8;
 
-    /* cienie */
-    --shadow-user-menu:
-        5px 5px 10px 0px rgba(0, 0, 0, 0.61),
-        inset -2px -4px 10px 0px rgba(124, 124, 124, 0.06);
-
-    --background-image-user-menu: linear-gradient(
-        to bottom,
-        var(--color-surface) 0%,
-        var(--color-surface) 50%,
-        var(--color-elevated) 100%
-    );
-    --background-image-accent-gradient: linear-gradient(
+    /* ----------------------------------------------------------
+       Gradients
+       Tailwind v4 generates bg-* classes for background-image
+       tokens. Usage: bg-gradient-accent, bg-gradient-hero, etc.
+       ---------------------------------------------------------- */
+    --background-image-gradient-accent: linear-gradient(
         135deg,
         var(--color-accent-light) 0%,
-        var(--color-accent) 40%,
+        var(--color-accent) 45%,
         var(--color-accent-deep) 100%
     );
 
-    /* Definiowanie z-index za pomocą zmiennych --z-* */
+    --background-image-gradient-accent-soft: linear-gradient(
+        135deg,
+        rgba(34, 211, 238, 0.15),
+        rgba(6, 182, 212, 0.08)
+    );
+
+    --background-image-gradient-dark-radial: radial-gradient(
+        circle at top,
+        rgba(34, 211, 238, 0.08),
+        transparent 60%
+    );
+
+    --background-image-gradient-hero:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(34, 211, 238, 0.18),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(6, 182, 212, 0.12),
+            transparent 50%
+        );
+
+    /* Box Shadows — Outer (elevation)
+       Generates: shadow-xs, shadow-sm, shadow-md, shadow-lg, shadow-xl
+       Visible on dark bg: deep black drop + faint bright top edge
+       ---------------------------------------------------------- */
+    --shadow-xs: 0 2px 6px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.45);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
+    --shadow-xl: 0 32px 80px rgba(0, 0, 0, 0.65);
+
+    /* Raised — top bright edge makes card visually lift off dark bg */
+    --shadow-raised-sm:
+        0 1px 0 rgba(255, 255, 255, 0.04), 0 4px 16px rgba(0, 0, 0, 0.5);
+
+    --shadow-raised-md:
+        0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 32px rgba(0, 0, 0, 0.55);
+
+    --shadow-raised-lg:
+        0 1px 0 rgba(255, 255, 255, 0.06), 0 24px 60px rgba(0, 0, 0, 0.6);
+
+    /* ----------------------------------------------------------
+       Box Shadows — Inner (depth / pressed states)
+       Generates: shadow-inner-sm, shadow-inner-md, shadow-inner-lg
+       ---------------------------------------------------------- */
+
+    /* Subtle pressed — input fields, inactive tabs */
+    --shadow-inner-sm:
+        inset 0 1px 3px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+    /* Medium depth — wells, code blocks */
+    --shadow-inner-md:
+        inset 0 2px 8px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    /* Deep hole — dark inset panels */
+    --shadow-inner-lg:
+        inset 0 4px 16px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.015);
+
+    /* ----------------------------------------------------------
+       Box Shadows — Cyan Glow (accent UI, focus rings)
+       Generates: shadow-glow, shadow-glow-strong, shadow-glow-wide
+       ---------------------------------------------------------- */
+    --shadow-glow:
+        0 0 0 1px rgba(34, 211, 238, 0.2), 0 0 20px rgba(34, 211, 238, 0.12);
+
+    --shadow-glow-strong:
+        0 0 0 1px rgba(34, 211, 238, 0.35), 0 0 40px rgba(34, 211, 238, 0.22);
+
+    --shadow-glow-wide:
+        0 0 0 1px rgba(34, 211, 238, 0.15), 0 0 60px rgba(34, 211, 238, 0.18),
+        0 0 120px rgba(6, 182, 212, 0.1);
+
+    /* ----------------------------------------------------------
+       Box Shadows — Neumorphism (tuned for surface: #0a0a12)
+       Rule: highlight = top-left white 3–5%, shadow = bottom-right black 50–65%
+       Generates: shadow-neuro-flat, shadow-neuro-raised,
+                  shadow-neuro-pressed, shadow-neuro-inset, shadow-neuro-accent
+       ---------------------------------------------------------- */
+
+    /* Flat — barely lifts, blends with surface */
+    --shadow-neuro-flat:
+        2px 2px 5px rgba(0, 0, 0, 0.45),
+        -2px -2px 5px rgba(255, 255, 255, 0.025);
+
+    /* Raised — clearly elevated button or card */
+    --shadow-neuro-raised:
+        5px 5px 12px rgba(0, 0, 0, 0.55),
+        -4px -4px 10px rgba(255, 255, 255, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    /* Pressed — active / clicked state */
+    --shadow-neuro-pressed:
+        inset 3px 3px 8px rgba(0, 0, 0, 0.6),
+        inset -2px -2px 6px rgba(255, 255, 255, 0.025);
+
+    /* Inset well — inputs, textareas, code areas */
+    --shadow-neuro-inset:
+        inset 4px 4px 12px rgba(0, 0, 0, 0.65),
+        inset -3px -3px 8px rgba(255, 255, 255, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+    /* Neuro + cyan tint — accent interactive elements */
+    --shadow-neuro-accent:
+        5px 5px 14px rgba(0, 0, 0, 0.55),
+        -4px -4px 10px rgba(34, 211, 238, 0.04),
+        inset 0 1px 0 rgba(34, 211, 238, 0.06);
+
+    /* ----------------------------------------------------------
+       Legacy / named UI shadows
+       ---------------------------------------------------------- */
+    --shadow-menu:
+        5px 5px 10px 0px rgba(0, 0, 0, 0.61),
+        inset -2px -4px 10px 0px rgba(124, 124, 124, 0.06);
+
+    /* ----------------------------------------------------------
+       Z-Index Scale
+       Tailwind v4 generates z-* utilities from --z-* tokens.
+       Usage: z-canvas, z-overlay, z-header, z-dropdown
+       ---------------------------------------------------------- */
     --z-canvas: 0;
     --z-overlay: 10;
     --z-header: 20;
     --z-dropdown: 50;
 }
 
+/* ============================================================
+   COMPONENT TOKENS
+   These values are NOT auto-scanned by Tailwind and will NOT
+   produce utility classes. They are meant for use in
+   component CSS below, or via arbitrary values in JSX:
+   e.g. className="bg-[var(--glass-bg)] backdrop-blur-[14px]"
+   ============================================================ */
 @layer base {
+    :root {
+        /* Glass surface — semi-transparent dark panel */
+        --glass-bg: rgba(15, 15, 26, 0.55);
+        --glass-border-color: rgba(148, 163, 184, 0.08);
+        --glass-blur: 14px;
+        --glass-blur-strong: 24px;
+
+        /* Glow border shorthand (use as outline, not border) */
+        --outline-glow: 0 0 0 1px rgba(34, 211, 238, 0.25);
+
+        /* Gradient backgrounds for specific named UI regions */
+        --bg-matte: linear-gradient(
+            to bottom,
+            rgba(10, 10, 18, 0.9),
+            rgba(10, 10, 18, 0.75)
+        );
+        --bg-user-menu: linear-gradient(
+            to bottom,
+            var(--color-surface) 0%,
+            var(--color-surface) 50%,
+            var(--color-elevated) 100%
+        );
+    }
+
     html {
         color-scheme: dark;
     }
@@ -74,29 +239,105 @@
         color: var(--color-text-primary);
         font-family: var(--font-mono);
     }
+
     a {
         color: var(--color-text-secondary);
     }
+
     :focus-visible {
         outline: 2px solid var(--color-accent-deep);
         outline-offset: 2px;
         border-radius: 4px;
     }
+}
 
-    @layer components {
-        .text-gradient {
-            @apply font-bold;
-            background: linear-gradient(
-                90deg,
-                #94a3b8d2 0%,
-                #e2e8f0 40%,
-                #47556888 100%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-            display: inline-block;
-        }
+/* ============================================================
+   REUSABLE COMPONENTS
+   Tailwind @apply shortcuts for frequently composed patterns.
+   ============================================================ */
+@layer components {
+    /* Glass card — frosted dark panel */
+    .glass-light {
+        background-color: rgba(14, 28, 54, 0.55);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border: 1px solid rgba(34, 211, 238, 0.12);
+    }
+    .glass {
+        background-color: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border: 1px solid var(--glass-border-color);
+    }
+
+    .glass-strong {
+        background-color: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur-strong));
+        -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+        border: 1px solid var(--glass-border-color);
+    }
+
+    /* Cyan glow border — use instead of border shorthand variable */
+    .border-glow {
+        border: 1px solid rgba(34, 211, 238, 0.25);
+    }
+
+    /* Subtle slate border */
+    .border-soft {
+        border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    /* Bevel corner (CSS corner-shape, progressive enhancement) */
+    .bevel {
+        border-radius: 0 0 8px 0;
+        corner-shape: bevel;
+    }
+
+    .solid-button {
+        background-image: var(--bg-matte);
+        box-shadow: var(--shadow-neuro-accent);
+        transition:
+            background-color 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    /* Gradient text — silver-to-slate */
+    .text-gradient {
+        @apply font-bold;
+        background: linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.82) 0%,
+            #e2e8f0 40%,
+            rgba(71, 85, 104, 0.53) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block;
+    }
+
+    /* Accent gradient text */
+    .text-gradient-accent {
+        @apply font-bold;
+        background: var(--background-image-gradient-accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block;
+    }
+    .text-gradient-badge {
+        @apply font-light tracking-widest;
+        background: linear-gradient(
+            90deg,
+            rgba(61, 164, 212, 0.671) 0%,
+            rgba(81, 120, 173, 0.7) 40%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block;
     }
 }
