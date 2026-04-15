@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { colors } from "@/constants/colors";
+import { colors } from "../constants/colors";
 
 export default function HeroBadge() {
     const { t } = useTranslation("landing", { keyPrefix: "hero" });

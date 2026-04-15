@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/react";
 import { motion } from "framer-motion";
-import { logoVariants } from "@/constants/animations";
+import { logoVariants } from "@shared/constants/animations";
 
 type SizeProp = "sm" | "md" | "lg";
 type SizeMap = Record<SizeProp, { svg: number; text: string }>;

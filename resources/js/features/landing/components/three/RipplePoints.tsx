@@ -2,9 +2,12 @@ import { useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
-import { calculateWaveHeight, generateRippleGrid } from "@/utils/rippleUtils";
-import { rippleConfig } from "@/constants/rippleConfig";
-import { createRippleMaterial } from "@/constants/rippleMaterials";
+import {
+    calculateWaveHeight,
+    generateRippleGrid,
+} from "../../utils/rippleUtils";
+import { rippleConfig } from "../../constants/rippleConfig";
+import { createRippleMaterial } from "../../constants/rippleMaterials";
 
 THREE.ColorManagement.enabled = false;
 

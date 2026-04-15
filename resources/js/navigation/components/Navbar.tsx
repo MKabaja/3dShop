@@ -1,8 +1,8 @@
-import type { PageProps } from "@/types/global/pageProps";
-import type { UserRole, User } from "@/types/models";
+import type { PageProps } from "@shared/types/global/pageProps";
+import type { UserRole, User } from "@shared/types/models";
 import type { AuthVariant } from "./AuthMenu";
 
-import Logo from "../ui/Logo";
+import Logo from "@shared/ui/Logo";
 import AuthMenu from "./AuthMenu";
 import MobileMenu from "./MobileMenu";
 

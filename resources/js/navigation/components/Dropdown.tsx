@@ -1,9 +1,9 @@
-import { NavigationLink } from "@/types/navigation/navbar";
+import { NavigationLink } from "@shared/types/navigation/navbar";
 import { Link } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { itemVariants, dropdownVariants } from "@/constants/animations";
-import useRovingFocus from "@/hooks/useRovingFocus";
+import { itemVariants, dropdownVariants } from "@shared/constants/animations";
+import useRovingFocus from "@shared/hooks/useRovingFocus";
 import { useRef, type FocusEvent } from "react";
 
 type DropdownProps = {

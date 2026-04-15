@@ -1,7 +1,7 @@
-import type { NavigationLink } from "@/types/navigation/navbar";
+import type { NavigationLink } from "@shared/types/navigation/navbar";
 import { Link } from "@inertiajs/react";
 import { useTranslation } from "react-i18next";
-import { navVariants } from "@/constants/animations";
+import { navVariants } from "@shared/constants/animations";
 
 import { motion } from "framer-motion";
 

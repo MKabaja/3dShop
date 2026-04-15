@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "target": "ESNext",
@@ -12,9 +11,20 @@
         "jsx": "react-jsx",
         "skipLibCheck": true,
         "types": ["vite/client", "ziggy-js"],
+
         "paths": {
             "@/*": ["./resources/js/*"],
-            "ziggy-js": ["./vendor/tightenco/ziggy"]
+            "@features/*": ["./resources/js/features/*"],
+            "@navigation/*": ["./resources/js/navigation/*"],
+            "@shared/*": ["./resources/js/shared/*"],
+            "@ui/*": ["./resources/js/shared/ui/*"],
+            "@hooks/*": ["./resources/js/shared/hooks/*"],
+            "@types/*": ["./resources/js/shared/types/*"],
+            "@constants/*": ["./resources/js/shared/constants/*"],
+            "@components/*": ["./resources/js/components/*"],
+            "@layouts/*": ["./resources/js/layouts/*"],
+            "@pages/*": ["./resources/js/pages/*"],
+            "@locales/*": ["./resources/js/locales/*"]
         }
     },
     "include": [

@@ -1,5 +1,5 @@
 import NavElement from "./NavElement";
-import { NAVIGATION_LINKS } from "@/constants/navbar";
+import { NAVIGATION_LINKS } from "@shared/constants/navbar";
 
 export default function NavigationList() {
     return (

@@ -1,12 +1,12 @@
-import HambuergerIcon from "../ui/HamburgerIcon";
+import HambuergerIcon from "@shared/ui/HamburgerIcon";
 import { useTranslation } from "react-i18next";
-import { useDropdown } from "@/hooks/useDropdown";
+import { useDropdown } from "@navigation/hooks/useDropdown";
 import { AnimatePresence, motion } from "framer-motion";
 import Overlay from "./Overlay";
 import Dropdown from "./Dropdown";
-import { NAVIGATION_LINKS } from "@/constants/navbar";
-import { navVariants } from "@/constants/animations";
-import useFocusReturn from "@/hooks/useFocusReturn";
+import { NAVIGATION_LINKS } from "@shared/constants/navbar";
+import { navVariants } from "@shared/constants/animations";
+import useFocusReturn from "@shared/hooks/useFocusReturn";
 
 import { useRef } from "react";
 

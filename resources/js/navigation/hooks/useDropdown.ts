@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
-import { useLockBodyScroll } from "./useLockBodyScroll";
-import { useKeyClose } from "./useKeyClose";
+import { useLockBodyScroll } from "@/shared/hooks/useLockBodyScroll";
+import { useKeyClose } from "@/shared/hooks/useKeyClose";
 
 /**
  * useDropdown - reusable hook for managing dropdown/modal open state.

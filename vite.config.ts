@@ -4,8 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import * as path from "path";
 
-const js: string = "resources/js";
-const ziggy: string = "vendor/tightenco/ziggy/dist/index.esm.js";
+const r = (p: string) => path.resolve(process.cwd(), p);
+const js = "resources/js";
 
 export default defineConfig({
     server: {
@@ -29,7 +29,18 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            "@": path.resolve(process.cwd(), js),
+            "@": r(js),
+            "@features": r(`${js}/features`),
+            "@navigation": r(`${js}/navigation`),
+            "@shared": r(`${js}/shared`),
+            "@ui": r(`${js}/shared/ui`),
+            "@hooks": r(`${js}/shared/hooks`),
+            "@types": r(`${js}/shared/types`),
+            "@constants": r(`${js}/shared/constants`),
+            "@components": r(`${js}/components`),
+            "@layouts": r(`${js}/layouts`),
+            "@pages": r(`${js}/pages`),
+            "@locales": r(`${js}/locales`),
 
             "@routes": "ziggy-js",
         },

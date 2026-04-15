@@ -1,6 +1,6 @@
 import "i18next";
 
-import pl from "../locales/pl.json";
+import pl from "../locales/pl/plCommon.json";
 
 declare module "i18next" {
     interface CustomTypeOptions {

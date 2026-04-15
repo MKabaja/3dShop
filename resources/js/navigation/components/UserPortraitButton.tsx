@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { HTMLMotionProps } from "framer-motion";
-import ArrowIcon from "../ui/ArrowIcon";
+import ArrowIcon from "@shared/ui/ArrowIcon";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 

@@ -2,7 +2,6 @@ import { ModelPlaceholder } from "./ModelPlaceHolder";
 import { useTranslation } from "react-i18next";
 import HeroBadge from "./HeroBadge";
 import { ShieldCheck } from "lucide-react";
-import Button from "../ui/Button";
 
 export default function HeroSection() {
     const { t } = useTranslation("landing", { keyPrefix: "hero" });
@@ -23,12 +22,12 @@ export default function HeroSection() {
                 </h1>
                 <p className="mt-8 text-text-muted italic">{t("subtitle")}</p>
                 <div className="grid  grid-cols-3 gap-4 ">
-                    <Button label={t("ctaPrimary")} className="col-span-2" />
+                    {/* <Button label={t("ctaPrimary")} className="col-span-2" />
                     <Button
                         label={t("ctaSecondary")}
                         variant="outline"
                         className="col-span-2"
-                    />
+                    /> */}
                 </div>
                 <small className="flex items-center space-x-2">
                     <ShieldCheck className=" text-accent-muted" size={16} />

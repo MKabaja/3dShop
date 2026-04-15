@@ -1,14 +1,14 @@
 import { type ReactNode, useRef } from "react";
-import type { NavigationLink } from "@/types/navigation/navbar";
-import GuestIcon from "../ui/GuestIcon";
+import type { NavigationLink } from "@shared/types/navigation/navbar";
+import GuestIcon from "@shared/ui/GuestIcon";
 import Dropdown from "./Dropdown";
 import UserPortraitButton from "./UserPortraitButton";
 import Overlay from "./Overlay";
 import { router } from "@inertiajs/react";
 import { AnimatePresence } from "framer-motion";
-import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@/constants/navbar";
-import { useDropdown } from "@/hooks/useDropdown";
-import useFocusReturn from "@/hooks/useFocusReturn";
+import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@shared/constants/navbar";
+import { useDropdown } from "@navigation/hooks/useDropdown";
+import useFocusReturn from "@shared/hooks/useFocusReturn";
 
 export type AuthVariant = "guest" | "user" | "admin";
 type AuthMenuProps = {
