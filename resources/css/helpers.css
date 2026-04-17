@@ -1,0 +1,147 @@
+:root {
+    /* Glass surface — semi-transparent dark panel */
+    --glass-bg: rgba(15, 15, 26, 0.438);
+    --glass-border-color: rgba(148, 163, 184, 0.08);
+    --glass-blur: 5px;
+    --glass-blur-strong: 24px;
+
+    /* Glow border shorthand (use as outline, not border) */
+    --outline-glow: 0 0 0 1px rgba(34, 211, 238, 0.25);
+
+    /* Gradient backgrounds for specific named UI regions */
+    --bg-matte: linear-gradient(
+        to bottom,
+        rgba(10, 10, 18, 0.9),
+        rgba(10, 10, 18, 0.75)
+    );
+    --bg-user-menu: linear-gradient(
+        to bottom,
+        var(--color-surface) 0%,
+        var(--color-surface) 50%,
+        var(--color-elevated) 100%
+    );
+}
+@layer components {
+    /* Glass card — frosted dark panel */
+    .glass-light {
+        background-color: rgba(14, 28, 54, 0.55);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border: 1px solid rgba(34, 211, 238, 0.12);
+    }
+    .glass {
+        background-color: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border: 1px solid var(--glass-border-color);
+    }
+
+    .glass-strong {
+        background-color: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur-strong));
+        -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+        border: 1px solid var(--glass-border-color);
+    }
+
+    /* Cyan glow border — use instead of border shorthand variable */
+    .border-glow {
+        border: 1px solid rgba(34, 211, 238, 0.25);
+    }
+
+    /* Subtle slate border */
+    .border-soft {
+        border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    /* Bevel corner (CSS corner-shape, progressive enhancement) */
+    .bevel {
+        border-radius: 0 0 8px 0;
+        corner-shape: bevel;
+    }
+
+    .solid-button {
+        background-image: var(--bg-matte);
+        box-shadow: var(--shadow-neuro-accent);
+        transition:
+            background-color 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    /* Gradient text — silver-to-slate */
+    .text-gradient {
+        @apply font-bold;
+        background: linear-gradient(
+            90deg,
+            rgba(148, 163, 184, 0.82) 0%,
+            #e2e8f0 40%,
+            rgba(71, 85, 104, 0.53) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block;
+    }
+
+    /* Accent gradient text */
+    .text-gradient-accent {
+        @apply font-bold;
+        background: var(--background-image-gradient-accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block;
+    }
+    .text-gradient-badge {
+        @apply font-light tracking-widest;
+        background: linear-gradient(
+            90deg,
+            rgba(61, 164, 212, 0.671) 0%,
+            rgba(81, 120, 173, 0.7) 40%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block;
+    }
+    /* Divider — hairline, fade obu stron */
+    .divider-fade {
+        border: none;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            var(--color-border) 20%,
+            var(--color-border) 80%,
+            transparent
+        );
+    }
+
+    /* Feature/Use-case card — noise overlay */
+    .card-noise::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Feature/Use-case card — top edge cyan highlight */
+    .card-top-highlight::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 12px;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(34, 211, 238, 0.15),
+            transparent
+        );
+    }
+}

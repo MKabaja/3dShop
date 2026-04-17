@@ -1,4 +1,4 @@
-import { NavigationLink } from "@/types/navigation/navbar";
+import { NavigationLink } from "@shared/types/navigation/navbar";
 
 export const NAVIGATION_LINKS: NavigationLink[] = [
     { labelKey: "navbar.home", href: "/", id: "home-link" },

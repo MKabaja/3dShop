@@ -10,6 +10,14 @@
         "trust": "Nie potrzebujesz modelu 3D — pomożemy Ci go stworzyć.",
         "badge": "Druk 3D na zamówienie"
     },
+    "trustBar": {
+        "items": {
+            "freeQuote": "Bezpłatna wycena w 24h",
+            "weDesign": "Projekt od zera – bez modelu 3D",
+            "fastProduction": "Szybka realizacja i wysyłka",
+            "support": "Stały kontakt na każdym etapie"
+        }
+    },
     "features": {
         "title": "Dlaczego warto",
         "items": [

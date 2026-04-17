@@ -11,6 +11,14 @@
         "trust": "No 3D model needed — we’ll help you create one.",
         "badge": "Custom 3D Printing"
     },
+    "trustBar": {
+        "items": {
+            "freeQuote": "Free quote within 24 hours",
+            "weDesign": "We design from scratch — no 3D model needed",
+            "fastProduction": "Fast production and delivery",
+            "support": "Support at every stage"
+        }
+    },
     "features": {
         "title": "Why choose us",
         "items": [

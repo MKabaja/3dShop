@@ -51,9 +51,9 @@ function buttonClasses(variant: Variants, size: Sizes) {
     const baseClasses = "font-semibold transition duration-200 ";
 
     const variantClasses = {
-        solid: "bg-accent-muted text-base hover:shadow-glow-strong hover:bg-accent-deep",
+        solid: "bg-accent-deep text-card hover:text-base hover:shadow-glow-strong hover:bg-accent-hover",
         outline:
-            "border-soft border-2 hover:border-glow solid-button hover:shadow-neuro-inset",
+            "border-soft  hover:border-text-muted glass text-text-secondary hover:text-text-primary ",
     };
 
     const sizeClasses = {
