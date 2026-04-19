@@ -21,6 +21,17 @@
         var(--color-elevated) 100%
     );
 }
+
+@utility text-hero {
+    font-size: var(--text-hero);
+}
+@utility text-section {
+    font-size: var(--text-section);
+}
+@utility text-cards {
+    font-size: var(--text-cards);
+}
+
 @layer components {
     /* Glass card — frosted dark panel */
     .glass-light {

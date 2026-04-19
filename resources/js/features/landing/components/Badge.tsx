@@ -2,11 +2,14 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { colors } from "../constants/colors";
 
-export default function HeroBadge() {
-    const { t } = useTranslation("landing", { keyPrefix: "hero" });
+type BadgeProps = {
+    label: string;
+};
+
+export default function Badge({ label }: BadgeProps) {
     const { accentMuted, accentDeep, accentLight } = colors;
     return (
-        <div className=" inline-block bevel px-2 py-1   shadow-xl  glass-light">
+        <div className=" inline-block px-2 py-1   shadow-xl  ">
             <motion.span
                 className=" text-accent-light mx-1 font-bold text-md "
                 animate={{
@@ -18,10 +21,10 @@ export default function HeroBadge() {
                     ease: "easeInOut",
                 }}
             >
-                #
+                {"# "}
             </motion.span>
             <span className="text-gradient-badge uppercase   text-sm ">
-                {t("badge")}
+                {label}
             </span>
         </div>
     );

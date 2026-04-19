@@ -13,11 +13,11 @@
         <link
             rel="preload"
             as= "style" 
-            href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Oxanium:wght@100;300;400;500;600;700&family=JetBrains+Mono:wght@100;300;400;500&display=swap"
             onload="this.onload=null;this.rel='stylesheet'">
 
         <noscript>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@100;300;400;500;600;700&family=JetBrains+Mono:wght@100;300;400;500&display=swap">
         </noscript>
 
         <!-- Vite -->

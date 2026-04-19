@@ -1,8 +1,9 @@
 import type { FC, ReactNode } from "react";
 import AppLayoutWrapper from "./AppLayoutWrapper";
 import HeroSection from "@features/landing/components/HeroSection";
-import TrustBar from "@/features/landing/components/TrustBar";
+import TrustBarSection from "@/features/landing/components/TrustBarSection";
 import Scene from "@features/landing/components/three/Scene";
+import FeaturesSection from "@/features/landing/components/FeaturesSection";
 
 type InertiaPage = FC & {
     layout?: (page: ReactNode) => ReactNode;
@@ -14,8 +15,8 @@ const Index: InertiaPage = () => {
             <Scene />
             <div className="relative z-10">
                 <HeroSection />
-
-                <TrustBar />
+                <TrustBarSection />
+                <FeaturesSection />
             </div>
         </>
     );

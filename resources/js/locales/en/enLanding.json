@@ -12,6 +12,8 @@
         "badge": "Custom 3D Printing"
     },
     "trustBar": {
+        "heading": "Why choose us",
+
         "items": {
             "freeQuote": "Free quote within 24 hours",
             "weDesign": "We design from scratch — no 3D model needed",
@@ -20,24 +22,27 @@
         }
     },
     "features": {
-        "title": "Why choose us",
-        "items": [
-            {
-                "title": "From idea to design",
-                "description": "No model? No problem. Send us your idea or inspiration and we’ll handle the rest."
+        "title": "From idea to finished product",
+        "subtitle": "You have an idea — we’ll take care of the rest.",
+        "badge": "Why PrintForge",
+        "items": {
+            "design": {
+                "title": "Design from scratch",
+                "description": "No 3D model? A description, photo, or reference is enough — we’ll handle the rest."
             },
-            {
-                "title": "Precision and quality",
-                "description": "We focus on clean details and choose the right materials for your use case."
+            "printing": {
+                "title": "High-precision 3D printing",
+                "description": "We focus on quality, material selection, and making sure the result fits your use case."
             },
-            {
-                "title": "Guidance at every step",
-                "description": "We help you make the right decisions to get the best possible result."
+            "support": {
+                "title": "End-to-end support",
+                "description": "We guide, optimize, and help you make the right decisions — from idea to final product."
             }
-        ]
+        }
     },
     "howItWorks": {
         "title": "How it works",
+        "subtitle": "Three simple steps to bring your idea to life",
         "steps": [
             {
                 "title": "Tell us what you need",

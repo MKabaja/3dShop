@@ -187,4 +187,16 @@
     --z-overlay: 10;
     --z-header: 20;
     --z-dropdown: 50;
+
+    /*
+         ----------------------------------------------------------
+         Responsive Typography
+         Tailwind v4 generates text-* utilities from --text-* tokens.
+         Usage: text-hero, text-section, text-card, etc.
+         ----------------------------------------------------------
+    */
+
+    --text-hero: clamp(2.25rem, 5vw, 3.75rem); /* 36px → 60px */
+    --text-section: clamp(1.875rem, 3.5vw, 3rem); /* 30px → 48px */
+    --text-cards: clamp(1.125rem, 1.5vw, 1.5rem);
 }

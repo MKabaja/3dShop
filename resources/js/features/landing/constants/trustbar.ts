@@ -1,4 +1,9 @@
-import type { TrustBarItem } from "../types/trustbar";
+import type { ParseKeys } from "i18next";
+
+interface TrustBarItem {
+    labelKey: ParseKeys<"landing">;
+    readonly id: string;
+}
 
 export const TRUST_BAR_ITEMS: TrustBarItem[] = [
     { labelKey: "trustBar.items.freeQuote", id: "free-quote" },

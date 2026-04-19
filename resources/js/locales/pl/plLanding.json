@@ -11,6 +11,7 @@
         "badge": "Druk 3D na zamówienie"
     },
     "trustBar": {
+        "heading": "Dlaczego warto wybrać nas",
         "items": {
             "freeQuote": "Bezpłatna wycena w 24h",
             "weDesign": "Projekt od zera – bez modelu 3D",
@@ -19,24 +20,27 @@
         }
     },
     "features": {
-        "title": "Dlaczego warto",
-        "items": [
-            {
-                "title": "Projekt od zera lub na podstawie pomysłu",
-                "description": "Nie musisz mieć gotowego modelu — wystarczy opis lub inspiracja."
+        "title": "Od pomysłu do gotowego produktu",
+        "subtitle": "Masz pomysł — my zajmiemy się resztą.",
+        "badge": "Dlaczego PrintForge",
+        "items": {
+            "design": {
+                "title": "Projekt od zera",
+                "description": "Nie masz modelu 3D? Wystarczy opis, zdjęcie lub inspiracja — zajmiemy się resztą."
             },
-            {
-                "title": "Precyzyjny druk i dopracowane detale",
-                "description": "Dbamy o jakość wykonania i dobór materiałów do zastosowania."
+            "printing": {
+                "title": "Precyzyjny druk 3D",
+                "description": "Dbamy o jakość wykonania, dobór materiałów i dopasowanie do zastosowania."
             },
-            {
-                "title": "Wsparcie na każdym etapie",
-                "description": "Doradzamy, optymalizujemy i pomagamy podjąć dobre decyzje."
+            "support": {
+                "title": "Wsparcie od początku do końca",
+                "description": "Doradzamy, optymalizujemy i pomagamy podjąć dobre decyzje — od pomysłu aż po gotowy produkt."
             }
-        ]
+        }
     },
     "howItWorks": {
         "title": "Jak to działa",
+        "subtitle": "Trzy proste kroki do realizacji Twojego pomysłu",
         "steps": [
             {
                 "title": "Opowiedz nam o swoim pomyśle",
