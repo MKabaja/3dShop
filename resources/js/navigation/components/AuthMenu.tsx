@@ -1,16 +1,16 @@
-import { type ReactNode, useRef } from "react";
-import type { NavigationLink } from "@shared/types/navigation/navbar";
-import GuestIcon from "@shared/ui/GuestIcon";
-import Dropdown from "./Dropdown";
-import UserPortraitButton from "./UserPortraitButton";
-import Overlay from "./Overlay";
-import { router } from "@inertiajs/react";
-import { AnimatePresence } from "framer-motion";
-import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from "@shared/constants/navbar";
-import { useDropdown } from "@navigation/hooks/useDropdown";
-import useFocusReturn from "@shared/hooks/useFocusReturn";
+import { type ReactNode, useRef } from 'react';
+import type { NavigationLink } from '@shared/types/navigation/navbar';
+import GuestIcon from '@shared/ui/GuestIcon';
+import Dropdown from './Dropdown';
+import UserPortraitButton from './UserPortraitButton';
+import Overlay from './Overlay';
+import { router } from '@inertiajs/react';
+import { AnimatePresence } from 'framer-motion';
+import { AUTH_LINKS, USER_LINKS, ADMIN_LINKS } from '@shared/constants/navbar';
+import { useDropdown } from '@navigation/hooks/useDropdown';
+import useFocusReturn from '@shared/hooks/useFocusReturn';
 
-export type AuthVariant = "guest" | "user" | "admin";
+export type AuthVariant = 'guest' | 'user' | 'admin';
 type AuthMenuProps = {
     variant: AuthVariant;
     initials?: string;
@@ -48,12 +48,12 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
     useFocusReturn(isOpen, buttonRef);
 
     return (
-        <div className="relative ml-5">
+        <div className='relative ml-5'>
             <UserPortraitButton
                 ref={buttonRef}
                 isOpen={isOpen}
-                arrowColor="#0891b2"
-                className="text-accent-muted "
+                arrowColor='#0891b2'
+                className='text-accent-muted '
                 onClick={toggle}
             >
                 {strategyMap[variant].content(initials)}
@@ -68,8 +68,8 @@ export default function AuthMenu({ initials, variant }: AuthMenuProps) {
                             isOpen={isOpen}
                             onClose={close}
                             onLogout={
-                                variant !== "guest"
-                                    ? () => router.post("/logout")
+                                variant !== 'guest'
+                                    ? () => router.post('/logout')
                                     : undefined
                             }
                         />

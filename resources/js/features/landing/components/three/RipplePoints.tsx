@@ -1,13 +1,13 @@
-import { useTexture } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
-import * as THREE from "three";
+import { useTexture } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
+import { useMemo, useRef } from 'react';
+import * as THREE from 'three';
 import {
     calculateWaveHeight,
     generateRippleGrid,
-} from "../../utils/rippleUtils";
-import { rippleConfig } from "../../constants/rippleConfig";
-import { createRippleMaterial } from "../../constants/rippleMaterials";
+} from '../../utils/rippleUtils';
+import { rippleConfig } from '../../constants/rippleConfig';
+import { createRippleMaterial } from '../../constants/rippleMaterials';
 
 THREE.ColorManagement.enabled = false;
 
@@ -54,15 +54,15 @@ function RipplePoints() {
         <points ref={pointsRef}>
             <bufferGeometry>
                 <bufferAttribute
-                    attach="attributes-position"
+                    attach='attributes-position'
                     args={[positions, 3]}
                 />
                 <bufferAttribute
-                    attach="attributes-normXZ"
+                    attach='attributes-normXZ'
                     args={[normXZ, 2]}
                 />
             </bufferGeometry>
-            <primitive object={material} attach="material" />
+            <primitive object={material} attach='material' />
         </points>
     );
 }

@@ -1,6 +1,6 @@
-import { useEffect, useState, type RefObject } from "react";
+import { useEffect, useState, type RefObject } from 'react';
 
-type Action = "ArrowDown" | "ArrowUp";
+type Action = 'ArrowDown' | 'ArrowUp';
 type Actionfunction = (index: number, length: number) => number;
 
 const actionStrategy: Record<Action, Actionfunction> = {
@@ -26,7 +26,7 @@ const actionStrategy: Record<Action, Actionfunction> = {
 function useRovingFocus<T extends HTMLElement>(
     containerRef: RefObject<T | null>,
     isOpen: boolean,
-    selector = "a",
+    selector = 'a',
 ) {
     const [currentIndex, setCurrentIndex] = useState(0);
     useEffect(() => {
@@ -43,7 +43,7 @@ function useRovingFocus<T extends HTMLElement>(
         );
 
         const handleKeyDown = (e: KeyboardEvent) => {
-            const allowedKeys: Action[] = ["ArrowDown", "ArrowUp"];
+            const allowedKeys: Action[] = ['ArrowDown', 'ArrowUp'];
 
             if (!allowedKeys.includes(e.key as Action)) return;
 
@@ -57,9 +57,9 @@ function useRovingFocus<T extends HTMLElement>(
             focusableElements[nextIndex]?.focus();
         };
 
-        containerRef.current.addEventListener("keydown", handleKeyDown);
+        containerRef.current.addEventListener('keydown', handleKeyDown);
         return () => {
-            containerRef.current?.removeEventListener("keydown", handleKeyDown);
+            containerRef.current?.removeEventListener('keydown', handleKeyDown);
         };
     }, [currentIndex, containerRef, selector]);
 }

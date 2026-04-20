@@ -1,6 +1,6 @@
-import { useState, useCallback } from "react";
-import { useLockBodyScroll } from "@/shared/hooks/useLockBodyScroll";
-import { useKeyClose } from "@/shared/hooks/useKeyClose";
+import { useState, useCallback } from 'react';
+import { useLockBodyScroll } from '@/shared/hooks/useLockBodyScroll';
+import { useKeyClose } from '@/shared/hooks/useKeyClose';
 
 /**
  * useDropdown - reusable hook for managing dropdown/modal open state.
@@ -21,7 +21,7 @@ import { useKeyClose } from "@/shared/hooks/useKeyClose";
  *     - toggle: function to open/close the dropdown
  */
 
-export function useDropdown(axis: "x" | "y" | "both" = "x") {
+export function useDropdown(axis: 'x' | 'y' | 'both' = 'x') {
     const [isOpen, setIsOpen] = useState(false);
     const close = useCallback(() => setIsOpen(false), []);
     const toggle = useCallback(() => setIsOpen((prev) => !prev), []);

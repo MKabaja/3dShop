@@ -1,9 +1,9 @@
-import { type ReactNode } from "react";
+import { type ReactNode } from 'react';
 
 type ContainerProps = {
     children: ReactNode;
     className?: string;
-    "aria-labelledby"?: string;
+    'aria-labelledby'?: string;
 };
 
 /**
@@ -12,12 +12,12 @@ type ContainerProps = {
 export default function Container({
     children,
     className,
-    "aria-labelledby": ariaLabelledby,
+    'aria-labelledby': ariaLabelledby,
 }: ContainerProps) {
     return (
         <section
             aria-labelledby={ariaLabelledby}
-            className={`md:grid md:grid-cols-4 relative flex flex-col items-start justify-start md:px-12  px-10 md:my-22  my-10 md:space-y-10 space-y-5 ${className || ""}`}
+            className={` md:grid md:grid-cols-4 relative flex flex-col items-start justify-start md:px-12  px-10 md:my-22  my-10 md:space-y-10 space-y-5 ${className || ''}`}
         >
             {children}
         </section>

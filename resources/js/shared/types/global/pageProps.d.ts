@@ -1,5 +1,5 @@
-import { type User } from "./models";
-import { type Config } from "ziggy-js";
+import { type User } from './models';
+import { type Config } from 'ziggy-js';
 
 export type PageProps<
     T extends Record<string, unknown> = Record<string, unknown>,

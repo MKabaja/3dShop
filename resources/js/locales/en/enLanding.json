@@ -43,20 +43,20 @@
     "howItWorks": {
         "title": "How it works",
         "subtitle": "Three simple steps to bring your idea to life",
-        "steps": [
-            {
+        "steps": {
+            "idea": {
                 "title": "Tell us what you need",
                 "description": "Send a description, sketch, or reference."
             },
-            {
+            "design": {
                 "title": "Get a design and quote",
                 "description": "We refine the details and prepare a proposal for you."
             },
-            {
+            "deliver": {
                 "title": "We print and deliver",
                 "description": "You receive a product made specifically for your needs."
             }
-        ]
+        }
     },
     "useCases": {
         "title": "What you can create",

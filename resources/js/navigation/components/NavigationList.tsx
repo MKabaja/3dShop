@@ -1,9 +1,9 @@
-import NavElement from "./NavElement";
-import { NAVIGATION_LINKS } from "@shared/constants/navbar";
+import NavElement from './NavElement';
+import { NAVIGATION_LINKS } from '@shared/constants/navbar';
 
 export default function NavigationList() {
     return (
-        <ul className="hidden md:flex mx-auto md:space-x-2 text-text-secondary xl:text-lg xl:space-x-4">
+        <ul className='hidden md:flex mx-auto md:space-x-2 text-text-secondary xl:text-lg xl:space-x-4'>
             {NAVIGATION_LINKS.map((item) => (
                 <NavElement
                     key={item.id}

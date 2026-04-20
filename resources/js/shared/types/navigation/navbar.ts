@@ -1,9 +1,9 @@
-import type { ParseKeys } from "i18next";
+import type { ParseKeys } from 'i18next';
 
 /**
  * Supported roles used to control navbar link visibility.
  */
-export type UserRole = "client" | "admin";
+export type UserRole = 'client' | 'admin';
 
 /**
  * Single navigation item definition displayed in the navbar.

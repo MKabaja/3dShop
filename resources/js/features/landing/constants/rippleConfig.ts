@@ -24,6 +24,6 @@ export const rippleConfig: RippleConfig = {
     pointSpacing: 3.8,
     waveFrequency: 0.0008,
     amplitude: 3.5,
-    color: "#0e7490",
-    texturePath: "/textures/circle.png",
+    color: '#0e7490',
+    texturePath: '/textures/circle.png',
 };

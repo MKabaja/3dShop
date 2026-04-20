@@ -41,20 +41,20 @@
     "howItWorks": {
         "title": "Jak to działa",
         "subtitle": "Trzy proste kroki do realizacji Twojego pomysłu",
-        "steps": [
-            {
+        "steps": {
+            "idea": {
                 "title": "Opowiedz nam o swoim pomyśle",
                 "description": "Może to być opis, zdjęcie lub szkic."
             },
-            {
+            "design": {
                 "title": "Przygotujemy projekt i wycenę",
                 "description": "Dopasowujemy szczegóły i ustalamy finalną wersję."
             },
-            {
+            "deliver": {
                 "title": "Drukujemy i wysyłamy gotowy produkt",
                 "description": "Otrzymujesz coś stworzonego dokładnie pod Twoje potrzeby."
             }
-        ]
+        }
     },
     "useCases": {
         "title": "Co możesz stworzyć",

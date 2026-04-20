@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 /**
  * Custom hook to close dropdowns or modals when a specific key is pressed (default is "Escape").
@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export function useKeyClose(
     isOpen: boolean,
     onClose: () => void,
-    key: string = "Escape",
+    key: string = 'Escape',
 ): void {
     useEffect(() => {
         if (!isOpen) return;
@@ -16,7 +16,7 @@ export function useKeyClose(
             if (e.key === key) onClose();
         };
 
-        document.addEventListener("keydown", handler);
-        return () => document.removeEventListener("keydown", handler);
+        document.addEventListener('keydown', handler);
+        return () => document.removeEventListener('keydown', handler);
     }, [isOpen, onClose, key]);
 }

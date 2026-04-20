@@ -1,10 +1,10 @@
-import { NavigationLink } from "@shared/types/navigation/navbar";
-import { Link } from "@inertiajs/react";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-import { itemVariants, dropdownVariants } from "@shared/constants/animations";
-import useRovingFocus from "@shared/hooks/useRovingFocus";
-import { useRef, type FocusEvent } from "react";
+import { NavigationLink } from '@shared/types/navigation/navbar';
+import { Link } from '@inertiajs/react';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { itemVariants, dropdownVariants } from '@shared/constants/animations';
+import useRovingFocus from '@shared/hooks/useRovingFocus';
+import { useRef, type FocusEvent } from 'react';
 
 type DropdownProps = {
     links: NavigationLink[];
@@ -29,15 +29,15 @@ export default function Dropdown({
     };
 
     const classes =
-        "font-light text-xs absolute right-0 top-full bg-card shadow-md rounded-md px-3 py-4 pr-12 z-50";
+        'font-light text-xs absolute right-0 top-full bg-card shadow-md rounded-md px-3 py-4 pr-12 z-50';
     return (
         <motion.ul
-            role="menu"
+            role='menu'
             variants={dropdownVariants}
             ref={containerRef}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
+            initial='hidden'
+            animate='visible'
+            exit='exit'
             className={`${classes} flex flex-col space-y-4`}
             onBlur={onBlur}
         >
@@ -46,15 +46,15 @@ export default function Dropdown({
                     key={link.href}
                     variants={itemVariants}
                     transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 400,
                         damping: 28,
                     }}
                 >
                     <Link
                         href={link.href}
-                        role="menuitem"
-                        className=" px-2 py-1 rounded hover:text-text-primary hover:bg-elevated transition-colors"
+                        role='menuitem'
+                        className=' px-2 py-1 rounded hover:text-text-primary hover:bg-elevated transition-colors'
                     >
                         {t(link.labelKey)}
                     </Link>
@@ -63,14 +63,14 @@ export default function Dropdown({
             {onLogout && (
                 <motion.li
                     variants={itemVariants}
-                    transition={{ type: "spring", stiffness: 400, damping: 28 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 28 }}
                 >
                     <button
-                        role="menuitem"
+                        role='menuitem'
                         onClick={onLogout}
-                        className="px-2 py-1 rounded hover:text-text-primary hover:bg-elevated transition-colors w-full text-left font-light text-xs"
+                        className='px-2 py-1 rounded hover:text-text-primary hover:bg-elevated transition-colors w-full text-left font-light text-xs'
                     >
-                        {t("auth.logout")}
+                        {t('auth.logout')}
                     </button>
                 </motion.li>
             )}

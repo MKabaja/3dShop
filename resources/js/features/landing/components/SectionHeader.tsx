@@ -1,4 +1,4 @@
-import Badge from "./Badge";
+import Badge from './Badge';
 
 type SectionProps = {
     id: string;
@@ -18,14 +18,14 @@ export default function SectionHeader({
 }: SectionProps) {
     return (
         <div
-            className={`mt-5 space-y-5 col-span-3 ${centered ? "text-center" : ""}`}
+            className={`mt-5 space-y-5  ${centered ? 'mx-auto text-center col-span-4' : 'col-span-3'}`}
         >
             {label && <Badge label={label} />}
-            <h2 id={id} className=" font-normal text-section tracking-tight">
+            <h2 id={id} className=' font-normal text-section tracking-tight'>
                 {title}
             </h2>
             {subtitle && (
-                <p className="my-8 text-text-muted italic md:text-md text-sm">
+                <p className='my-8 text-text-muted italic md:text-md text-sm'>
                     {subtitle}
                 </p>
             )}

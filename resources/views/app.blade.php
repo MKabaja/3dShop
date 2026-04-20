@@ -31,7 +31,7 @@
         @inertiaHead
 
     </head>
-    <body class="bg-base font-mono antialiased overflow-x-hidden">
+    <body class="bg-base  antialiased overflow-x-hidden">
         @inertia
         <div id="portal-root"></div>
     </body>

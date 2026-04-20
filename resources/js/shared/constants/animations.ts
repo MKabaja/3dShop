@@ -1,4 +1,4 @@
-import type { Variants, Transition } from "framer-motion";
+import type { Variants, Transition } from 'framer-motion';
 /**
  * List container variant — does not animate itself,
  * it only orchestrates children via `staggerChildren`.
@@ -48,7 +48,7 @@ const dropdownVariants: Variants = {
  * instead of a literal and framer-motion throws a type error.
  */
 const springTransition: Transition = {
-    type: "spring",
+    type: 'spring',
     stiffness: 350,
     damping: 25,
     duration: 0.2,
@@ -76,16 +76,16 @@ const logoVariants: Variants = {
 };
 const navVariants: Variants = {
     initial: {
-        color: "#94a3b8",
-        backgroundColor: "transparent",
+        color: '#94a3b8',
+        backgroundColor: 'transparent',
         scale: 1,
     },
     hover: {
-        color: "#f1f5f9",
-        backgroundColor: "#0f172a",
+        color: '#f1f5f9',
+        backgroundColor: '#0f172a',
         transition: {
-            type: "tween",
-            ease: "easeInOut",
+            type: 'tween',
+            ease: 'easeInOut',
             duration: 0.1,
         },
     },

@@ -1,11 +1,11 @@
-import type { ParseKeys } from "i18next";
-import type { LucideIcon } from "lucide-react";
-import { DraftingCompass, Cog, Handshake } from "lucide-react";
+import type { ParseKeys } from 'i18next';
+import type { LucideIcon } from 'lucide-react';
+import { DraftingCompass, Cog, Handshake } from 'lucide-react';
 
 export interface FeatureItem {
-    labelKey: ParseKeys<"landing">;
+    labelKey: ParseKeys<'landing'>;
     id: string;
-    descriptionKey: ParseKeys<"landing">;
+    descriptionKey: ParseKeys<'landing'>;
     icon: LucideIcon;
 }
 /**
@@ -15,21 +15,21 @@ export interface FeatureItem {
  */
 export const FEATURE_ITEMS: FeatureItem[] = [
     {
-        id: "design",
-        labelKey: "features.items.design.title",
-        descriptionKey: "features.items.design.description",
+        id: 'design',
+        labelKey: 'features.items.design.title',
+        descriptionKey: 'features.items.design.description',
         icon: DraftingCompass,
     },
     {
-        id: "printing",
-        labelKey: "features.items.printing.title",
-        descriptionKey: "features.items.printing.description",
+        id: 'printing',
+        labelKey: 'features.items.printing.title',
+        descriptionKey: 'features.items.printing.description',
         icon: Cog,
     },
     {
-        id: "support",
-        labelKey: "features.items.support.title",
-        descriptionKey: "features.items.support.description",
+        id: 'support',
+        labelKey: 'features.items.support.title',
+        descriptionKey: 'features.items.support.description',
         icon: Handshake,
     },
 ] as const;

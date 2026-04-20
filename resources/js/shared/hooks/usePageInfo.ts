@@ -1,5 +1,5 @@
-import type { PageProps } from "../types/global/pageProps";
-import { usePage } from "@inertiajs/react";
+import type { PageProps } from '../types/global/pageProps';
+import { usePage } from '@inertiajs/react';
 type PageInfo = {
     /** The canonical URL of the current page */
     canonicalUrl: string;
@@ -19,7 +19,7 @@ function usePageInfo(): PageInfo {
 
     const base = pageProps.app_url ?? (import.meta.env.VITE_APP_URL as string);
     const canonicalUrl = base ? new URL(url, base).href : url;
-    const locale = pageProps.locale ?? "en";
+    const locale = pageProps.locale ?? 'en';
 
     return { canonicalUrl, locale };
 }

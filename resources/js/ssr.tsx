@@ -1,10 +1,10 @@
-import createServer from "@inertiajs/react/server";
-import { createInertiaApp } from "@inertiajs/react";
-import ReactDOMServer from "react-dom/server";
-import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
-import "@/i18n";
+import createServer from '@inertiajs/react/server';
+import { createInertiaApp } from '@inertiajs/react';
+import ReactDOMServer from 'react-dom/server';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import '@/i18n';
 
-const appName: string = import.meta.env.VITE_APP_NAME || "PrintForge";
+const appName: string = import.meta.env.VITE_APP_NAME || 'PrintForge';
 
 createServer((page) =>
     createInertiaApp({
@@ -14,7 +14,7 @@ createServer((page) =>
         resolve: (name) =>
             resolvePageComponent(
                 `./pages/${name}.tsx`,
-                import.meta.glob("./pages/**/*.tsx"),
+                import.meta.glob('./pages/**/*.tsx'),
             ),
         setup: ({ App, props }) => <App {...props} />,
     }),

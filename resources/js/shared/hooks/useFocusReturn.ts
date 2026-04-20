@@ -1,4 +1,4 @@
-import { useEffect, useRef, type RefObject } from "react";
+import { useEffect, useRef, type RefObject } from 'react';
 /**
  * Custom hook to return focus to a trigger element when a dropdown or modal is closed.
  *

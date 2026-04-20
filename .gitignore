@@ -24,7 +24,7 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
-
+.claude/
 
 # Sail / Docker
 docker-compose.override.yml

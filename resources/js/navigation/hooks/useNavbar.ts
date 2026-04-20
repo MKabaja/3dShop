@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { router } from "@inertiajs/react";
+import { useCallback, useEffect, useState } from 'react';
+import { router } from '@inertiajs/react';
 
 export function useNavbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -8,7 +8,7 @@ export function useNavbar() {
 
     useEffect(() => {
         const handleRouteChange = () => close();
-        const remove = router.on("start", handleRouteChange);
+        const remove = router.on('start', handleRouteChange);
 
         return () => {
             remove();
@@ -17,16 +17,16 @@ export function useNavbar() {
 
     useEffect(() => {
         const handler = (e: KeyboardEvent) => {
-            if (e.key === "Escape") close();
+            if (e.key === 'Escape') close();
         };
-        document.addEventListener("keydown", handler);
-        return () => document.removeEventListener("keydown", handler);
+        document.addEventListener('keydown', handler);
+        return () => document.removeEventListener('keydown', handler);
     }, [close]);
 
     useEffect(() => {
-        document.body.style.overflow = isOpen ? "hidden" : "";
+        document.body.style.overflow = isOpen ? 'hidden' : '';
         return () => {
-            document.body.style.overflow = "";
+            document.body.style.overflow = '';
         };
     }, [isOpen]);
 

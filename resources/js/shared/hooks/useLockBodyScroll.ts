@@ -1,12 +1,12 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-type Axis = "x" | "y" | "both";
-type Properties = "overflowX" | "overflowY" | "overflow";
+type Axis = 'x' | 'y' | 'both';
+type Properties = 'overflowX' | 'overflowY' | 'overflow';
 
 const axisMap: Record<Axis, Properties> = {
-    x: "overflowX",
-    y: "overflowY",
-    both: "overflow",
+    x: 'overflowX',
+    y: 'overflowY',
+    both: 'overflow',
 };
 
 /**
@@ -20,14 +20,14 @@ const axisMap: Record<Axis, Properties> = {
  *   - `"both"` — locks both axes (`overflow`)
  */
 
-export function useLockBodyScroll(isOpen: boolean, axis: Axis = "x"): void {
+export function useLockBodyScroll(isOpen: boolean, axis: Axis = 'x'): void {
     useEffect(() => {
         const property = axisMap[axis];
 
-        setBodyStyle(property, isOpen ? "hidden" : "");
+        setBodyStyle(property, isOpen ? 'hidden' : '');
 
         return () => {
-            setBodyStyle(property, "");
+            setBodyStyle(property, '');
         };
     }, [isOpen, axis]);
 }

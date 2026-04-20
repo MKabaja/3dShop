@@ -1,5 +1,5 @@
-import { AxiosInstance } from "axios";
-import { route as routeFn } from "ziggy-js";
+import { AxiosInstance } from 'axios';
+import { route as routeFn } from 'ziggy-js';
 
 declare global {
     interface Window {
@@ -10,7 +10,7 @@ declare global {
 }
 
 // Włączamy ścisłe sprawdzanie nazw tras
-declare module "ziggy-js" {
+declare module 'ziggy-js' {
     interface TypeConfig {
         strictRouteNames: true;
     }

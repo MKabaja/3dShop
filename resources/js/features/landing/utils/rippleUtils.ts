@@ -1,4 +1,4 @@
-import { type RippleConfig } from "@/constants/rippleConfig";
+import { type RippleConfig } from '@/constants/rippleConfig';
 
 type RippleGrid = {
     positions: Float32Array;
